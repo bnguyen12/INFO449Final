@@ -68,6 +68,11 @@ class titleViewController: UIViewController {
   // Set current currency according to which button was clicked
   @IBAction func selectCurrency(_ sender: UIButton) {
     currency = sender.titleLabel!.text!
+    for button in currencyButtons {
+      button.backgroundColor = UIColor(red:0.96, green:0.98, blue:0.95, alpha:1.0)
+    }
+    
+    sender.backgroundColor = UIColor(red:0.37, green:0.64, blue:0.33, alpha:1.0)
   }
   
 }
