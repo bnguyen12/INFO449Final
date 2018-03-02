@@ -62,5 +62,9 @@ class titleViewController: UIViewController {
     }
   }
   
+  @IBAction func selectCurrency(_ sender: UIButton) {
+    currency = sender.titleLabel!.text!
+  }
+  
 }
 

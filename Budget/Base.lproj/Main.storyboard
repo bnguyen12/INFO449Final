@@ -93,7 +93,7 @@
                                 </connections>
                             </button>
                             <label hidden="YES" opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="56d-Yc-yyr">
-                                <rect key="frame" x="30" y="426" width="315" height="30"/>
+                                <rect key="frame" x="30" y="446" width="315" height="30"/>
                                 <color key="backgroundColor" red="0.95686274510000002" green="0.97647058819999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="E5j-oD-cHw"/>
@@ -109,15 +109,14 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-bK-L6X">
-                                <rect key="frame" x="50" y="476" width="275" height="60"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="fDq-bK-L6X">
+                                <rect key="frame" x="30" y="496" width="315" height="60"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K3o-2b-GCe">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="98.5" height="60"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.97647058819999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="016-AE-GCi"/>
-                                            <constraint firstAttribute="width" constant="60" id="ggI-nS-ZxC"/>
                                         </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -131,15 +130,14 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="clickStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hrt-j5-FgC"/>
+                                            <action selector="selectCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zqo-1H-t1e"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k6k-yB-DFt">
-                                        <rect key="frame" x="107.5" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="108.5" y="0.0" width="98" height="60"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.97647058819999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="XeY-5A-9f2"/>
-                                            <constraint firstAttribute="width" constant="60" id="cb4-b6-dIA"/>
                                         </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -153,15 +151,14 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="clickStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Jku-Oq-CKf"/>
+                                            <action selector="selectCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="owb-Gm-wJd"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FB0-dw-sXf">
-                                        <rect key="frame" x="215" y="0.0" width="60" height="60"/>
+                                        <rect key="frame" x="216.5" y="0.0" width="98.5" height="60"/>
                                         <color key="backgroundColor" red="0.95686274510000002" green="0.97647058819999999" blue="0.95294117649999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="60" id="565-v4-3Xc"/>
-                                            <constraint firstAttribute="width" constant="60" id="F7E-Ie-txX"/>
                                         </constraints>
                                         <state key="normal">
                                             <attributedString key="attributedTitle">
@@ -175,7 +172,7 @@
                                             </attributedString>
                                         </state>
                                         <connections>
-                                            <action selector="clickStart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lJb-ST-o00"/>
+                                            <action selector="selectCurrency:" destination="BYZ-38-t0r" eventType="touchUpInside" id="0xM-JW-epF"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -197,12 +194,12 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="D90-pa-GEp" secondAttribute="trailing" constant="30" id="aQf-fc-wAH"/>
                             <constraint firstItem="l5k-ty-EV1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="fOI-vZ-QVU"/>
                             <constraint firstItem="l5k-ty-EV1" firstAttribute="top" secondItem="D90-pa-GEp" secondAttribute="bottom" constant="20" id="g6G-Mk-bSW"/>
-                            <constraint firstItem="fDq-bK-L6X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="50" id="hdB-sn-0JJ"/>
+                            <constraint firstItem="fDq-bK-L6X" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="hdB-sn-0JJ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0a9-2y-9Vn" secondAttribute="trailing" constant="30" id="lhD-pM-alm"/>
                             <constraint firstItem="0a9-2y-9Vn" firstAttribute="leading" secondItem="l5k-ty-EV1" secondAttribute="trailing" constant="5" id="pgP-Lj-fi0"/>
-                            <constraint firstItem="56d-Yc-yyr" firstAttribute="top" secondItem="l5k-ty-EV1" secondAttribute="bottom" constant="20" id="sq0-yW-MzW"/>
+                            <constraint firstItem="56d-Yc-yyr" firstAttribute="top" secondItem="l5k-ty-EV1" secondAttribute="bottom" constant="40" id="sq0-yW-MzW"/>
                             <constraint firstItem="D90-pa-GEp" firstAttribute="top" secondItem="TFp-p1-LsW" secondAttribute="bottom" constant="30" id="v39-Ml-Pp0"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fDq-bK-L6X" secondAttribute="trailing" constant="50" id="x2X-di-Flg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="fDq-bK-L6X" secondAttribute="trailing" constant="30" id="x2X-di-Flg"/>
                             <constraint firstItem="D90-pa-GEp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="xba-uB-lJY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
