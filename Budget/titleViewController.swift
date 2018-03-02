@@ -29,7 +29,6 @@ class titleViewController: UIViewController {
     }
     
     for button in currencyButtons {
-      button.isHidden = true
       button.layer.cornerRadius = 10
       button.titleEdgeInsets = UIEdgeInsetsMake(10, 10, 10, 10)
       button.titleLabel?.minimumScaleFactor = 0.5
@@ -41,8 +40,10 @@ class titleViewController: UIViewController {
   @IBAction func clickStart(_ sender: UIButton) {
     sender.flash()
     sender.isEnabled = false
-    nameField.isHidden = false
-    nameSubmit.isHidden = false
+    UIView.animate(withDuration: 0.5, animations: {
+      self.nameField.alpha = 1.0
+      self.nameSubmit.alpha = 1.0
+    })
   }
   
   //When "OK" is pressed, check if name field is filled out and show currency buttons
@@ -52,16 +53,19 @@ class titleViewController: UIViewController {
       name = nameField.text!
       nameField.isEnabled = false
       nameSubmit.isEnabled = false
-      currencyQuestion.isHidden = false
       
-      for button in currencyButtons {
-        button.isHidden = false
-      }
+      UIView.animate(withDuration: 0.5, animations: {
+        self.currencyQuestion.alpha = 1.0
+        for button in self.currencyButtons {
+          button.alpha = 1.0
+        }
+      })
     } else {
       sender.shake()
     }
   }
   
+  // Set current currency according to which button was clicked
   @IBAction func selectCurrency(_ sender: UIButton) {
     currency = sender.titleLabel!.text!
   }
