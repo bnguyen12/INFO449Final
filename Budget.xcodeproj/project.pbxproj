@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		343322412050BCD200119478 /* addNewExpensesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 343322402050BCD200119478 /* addNewExpensesViewController.swift */; };
 		3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497717E2048FD21005BBF76 /* AppDelegate.swift */; };
 		349771812048FD21005BBF76 /* titleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771802048FD21005BBF76 /* titleViewController.swift */; };
 		349771842048FD21005BBF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349771822048FD21005BBF76 /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		343322402050BCD200119478 /* addNewExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewExpensesViewController.swift; sourceTree = "<group>"; };
 		3497717B2048FD21005BBF76 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3497717E2048FD21005BBF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		349771802048FD21005BBF76 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewController.swift; sourceTree = "<group>"; };
@@ -102,6 +104,7 @@
 				3497717E2048FD21005BBF76 /* AppDelegate.swift */,
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
+				343322402050BCD200119478 /* addNewExpensesViewController.swift */,
 				349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */,
 				349771852048FD21005BBF76 /* Assets.xcassets */,
 				349771872048FD21005BBF76 /* LaunchScreen.storyboard */,
@@ -190,6 +193,9 @@
 		349771732048FD21005BBF76 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				KnownAssetTags = (
+					backspace,
+				);
 				LastSwiftUpdateCheck = 0920;
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = edu.uw.bennyn;
@@ -264,6 +270,7 @@
 			files = (
 				349771812048FD21005BBF76 /* titleViewController.swift in Sources */,
 				349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */,
+				343322412050BCD200119478 /* addNewExpensesViewController.swift in Sources */,
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
