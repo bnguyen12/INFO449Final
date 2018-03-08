@@ -222,5 +222,58 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
+        <!--Graph View Controller-->
+        <scene sceneID="XEJ-vb-csc">
+            <objects>
+                <viewController id="EZB-MA-Nux" customClass="graphViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XsG-l5-M82">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Yn-TL-wkm" customClass="LineChartView" customModule="Charts">
+                                <rect key="frame" x="0.0" y="100" width="375" height="567"/>
+                                <color key="backgroundColor" red="0.62384034590000004" green="0.9140185851" blue="0.92381800520000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Add a value" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ITs-FJ-Khg">
+                                <rect key="frame" x="20" y="20" width="223" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wby-Fd-ydL">
+                                <rect key="frame" x="278" y="20" width="77" height="30"/>
+                                <color key="backgroundColor" red="0.22222095729999999" green="0.85112136599999999" blue="0.92381614450000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="77" id="tFX-9C-yAW"/>
+                                </constraints>
+                                <state key="normal" title="GO">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tyf-Y0-HKz" firstAttribute="trailing" secondItem="wby-Fd-ydL" secondAttribute="trailing" constant="20" id="3Gb-zx-B34"/>
+                            <constraint firstItem="0Yn-TL-wkm" firstAttribute="top" secondItem="ITs-FJ-Khg" secondAttribute="bottom" constant="50" id="4Vn-GY-Gxq"/>
+                            <constraint firstItem="wby-Fd-ydL" firstAttribute="leading" secondItem="ITs-FJ-Khg" secondAttribute="trailing" constant="35" id="5ry-zC-Cc1"/>
+                            <constraint firstItem="ITs-FJ-Khg" firstAttribute="leading" secondItem="tyf-Y0-HKz" secondAttribute="leading" constant="20" id="8q1-Vf-aZm"/>
+                            <constraint firstItem="ITs-FJ-Khg" firstAttribute="top" secondItem="tyf-Y0-HKz" secondAttribute="top" id="9Co-Wl-1a0"/>
+                            <constraint firstItem="ITs-FJ-Khg" firstAttribute="top" secondItem="wby-Fd-ydL" secondAttribute="top" id="C5i-Z2-lSh"/>
+                            <constraint firstAttribute="trailing" secondItem="0Yn-TL-wkm" secondAttribute="trailing" id="MWp-Fm-Q3s"/>
+                            <constraint firstItem="0Yn-TL-wkm" firstAttribute="leading" secondItem="XsG-l5-M82" secondAttribute="leading" id="kyl-cl-sqB"/>
+                            <constraint firstItem="0Yn-TL-wkm" firstAttribute="bottom" secondItem="tyf-Y0-HKz" secondAttribute="bottom" id="o4D-t3-b7e"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tyf-Y0-HKz"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnButton" destination="wby-Fd-ydL" id="Pgs-H9-ORf"/>
+                        <outlet property="chtChart" destination="0Yn-TL-wkm" id="hDe-25-Lhu"/>
+                        <outlet property="txtTextBox" destination="ITs-FJ-Khg" id="g4q-o0-qqD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="OfG-ow-OAs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="876" y="126.38680659670166"/>
+        </scene>
     </scenes>
 </document>
