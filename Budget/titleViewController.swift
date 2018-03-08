@@ -9,7 +9,7 @@
 import UIKit
 
 class titleViewController: UIViewController {
-
+    
   @IBOutlet var buttons: [UIButton]!
   @IBOutlet var currencyButtons: [UIButton]!
   @IBOutlet weak var currencyQuestion: UILabel!
