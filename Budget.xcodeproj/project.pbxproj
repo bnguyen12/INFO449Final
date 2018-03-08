@@ -15,6 +15,9 @@
 		349771942048FD21005BBF76 /* BudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771932048FD21005BBF76 /* BudgetTests.swift */; };
 		3497719F2048FD21005BBF76 /* BudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497719E2048FD21005BBF76 /* BudgetUITests.swift */; };
 		349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */; };
+		42DF940C2050BE0300D6C18E /* BudgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940B2050BE0300D6C18E /* BudgetListViewController.swift */; };
+		42DF940E2050C02600D6C18E /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940D2050C02600D6C18E /* Budget.swift */; };
+		42DF94102050C0A000D6C18E /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940F2050C0A000D6C18E /* Expense.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +52,9 @@
 		3497719E2048FD21005BBF76 /* BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetUITests.swift; sourceTree = "<group>"; };
 		349771A02048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonAnimationExtension.swift; sourceTree = "<group>"; };
+		42DF940B2050BE0300D6C18E /* BudgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListViewController.swift; sourceTree = "<group>"; };
+		42DF940D2050C02600D6C18E /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
+		42DF940F2050C0A000D6C18E /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +108,10 @@
 				3497717E2048FD21005BBF76 /* AppDelegate.swift */,
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
+				42DF940D2050C02600D6C18E /* Budget.swift */,
+				42DF940F2050C0A000D6C18E /* Expense.swift */,
 				349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */,
+				42DF940B2050BE0300D6C18E /* BudgetListViewController.swift */,
 				349771852048FD21005BBF76 /* Assets.xcassets */,
 				349771872048FD21005BBF76 /* LaunchScreen.storyboard */,
 				3497718A2048FD21005BBF76 /* Info.plist */,
@@ -262,9 +271,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DF94102050C0A000D6C18E /* Expense.swift in Sources */,
 				349771812048FD21005BBF76 /* titleViewController.swift in Sources */,
 				349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */,
+				42DF940E2050C02600D6C18E /* Budget.swift in Sources */,
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
+				42DF940C2050BE0300D6C18E /* BudgetListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
