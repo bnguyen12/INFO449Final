@@ -15,7 +15,9 @@ class addNewExpensesViewController: UIViewController {
   var expenseAmount = Double()
   var nums = ["0", ".", "0", "0"]
   //var categories = [String]
+  //var currency = String()
   var categories = ["Groceries", "Leisure", "Automotive"]
+  var currency = "$"
   
   override func viewDidLoad() {
       super.viewDidLoad()
@@ -24,7 +26,7 @@ class addNewExpensesViewController: UIViewController {
   
   @IBAction func clickButton(_ sender: UIButton) {
     if sender.tag <= 9 {
-      if inputAmount.text!.starts(with: "$0") {
+      if inputAmount.text!.starts(with: currency + "0") {
         nums[0] = nums[2]
         nums[2] = nums[3]
         let temp = nums.removeLast()
@@ -50,7 +52,7 @@ class addNewExpensesViewController: UIViewController {
       inputAmount.text!.remove(at: inputAmount.text!.startIndex)
       expenseAmount = Double(inputAmount.text!)!
     }
-    inputAmount.text! = "$" + nums.joined()
+    inputAmount.text! = currency + nums.joined()
   }
 }
 
