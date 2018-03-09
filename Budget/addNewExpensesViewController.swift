@@ -7,23 +7,45 @@
 //
 
 import UIKit
+import DropDown
 
 class addNewExpensesViewController: UIViewController {
   
   @IBOutlet weak var inputAmount: UITextField!
   @IBOutlet var expenseInput: [UIButton]!
+  @IBOutlet weak var categoryText: UILabel!
   var expenseAmount = Double()
   var nums = ["0", ".", "0", "0"]
+  var categories = ["Groceries", "Leisure", "Automotive"] //temp data
+  var category = "Groceries" //temp data
+  var currency = "$" //temp data
+  let dropdown = DropDown()
   //var categories = [String]
   //var currency = String()
-  var categories = ["Groceries", "Leisure", "Automotive"]
-  var currency = "$"
+  //var category = String()
   
   override func viewDidLoad() {
-      super.viewDidLoad()
-
+    super.viewDidLoad()
+    categoryText.text = category
+    dropdown.textFont = UIFont.systemFont(ofSize: 24)
+    dropdown.textColor = UIColor.white
+    dropdown.backgroundColor = UIColor(red:0.72, green:0.86, blue:0.69, alpha:1.0)
+    dropdown.cornerRadius = 15
+    dropdown.anchorView = view
+    dropdown.dataSource = categories
+    dropdown.bottomOffset = CGPoint(x: 0, y: dropdown.plainView.bounds.height + 120)
   }
   
+  // Open drop down menu and store the selected item into the category variable
+  @IBAction func clickCategory(_ sender: Any) {
+    dropdown.show()
+    dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
+      self.category = item
+      self.categoryText.text = item
+    }
+  }
+  
+  // Take in input for number or action whenever a button is pressed
   @IBAction func clickButton(_ sender: UIButton) {
     if sender.tag <= 9 {
       if inputAmount.text!.starts(with: currency + "0") {
