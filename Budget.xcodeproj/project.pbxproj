@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		34564FE12053332100046FD5 /* convertCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34564FE02053332100046FD5 /* convertCurrencyViewController.swift */; };
+		34964311205375AA00AA8F86 /* convertCurrencyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34964310205375AA00AA8F86 /* convertCurrencyCustomCell.swift */; };
 		3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497717E2048FD21005BBF76 /* AppDelegate.swift */; };
 		349771812048FD21005BBF76 /* titleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771802048FD21005BBF76 /* titleViewController.swift */; };
 		349771842048FD21005BBF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349771822048FD21005BBF76 /* Main.storyboard */; };
@@ -38,6 +39,7 @@
 
 /* Begin PBXFileReference section */
 		34564FE02053332100046FD5 /* convertCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = convertCurrencyViewController.swift; path = Budget/convertCurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
+		34964310205375AA00AA8F86 /* convertCurrencyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertCurrencyCustomCell.swift; sourceTree = "<group>"; };
 		3497717B2048FD21005BBF76 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3497717E2048FD21005BBF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Budget/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		349771802048FD21005BBF76 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = titleViewController.swift; path = Budget/titleViewController.swift; sourceTree = SOURCE_ROOT; };
@@ -112,6 +114,7 @@
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
 				34564FE02053332100046FD5 /* convertCurrencyViewController.swift */,
+				34964310205375AA00AA8F86 /* convertCurrencyCustomCell.swift */,
 				349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */,
 				349771852048FD21005BBF76 /* Assets.xcassets */,
 				349771872048FD21005BBF76 /* LaunchScreen.storyboard */,
@@ -348,6 +351,7 @@
 			files = (
 				349771812048FD21005BBF76 /* titleViewController.swift in Sources */,
 				34564FE12053332100046FD5 /* convertCurrencyViewController.swift in Sources */,
+				34964311205375AA00AA8F86 /* convertCurrencyCustomCell.swift in Sources */,
 				349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */,
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
 			);

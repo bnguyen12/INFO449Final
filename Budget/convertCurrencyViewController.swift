@@ -18,6 +18,7 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
                   "Automotive": 120.00,
                   "Housing": 750.25]
   //var currency = String() //get from segue
+  
   override func viewDidLoad() {
     super.viewDidLoad()
     setupMenu()
@@ -47,7 +48,9 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
   
   // Set current currency to whatever was selected
   func circleMenu(_: CircleMenu, buttonDidSelected _: UIButton, atIndex: Int) {
+    convertCurrency(currencies[atIndex])
     currency = currencies[atIndex]
+    table.reloadData()
   }
   
   // Make the table half the size of the view
@@ -55,12 +58,48 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
     table.frame = CGRect(x: 0, y: self.view.center.y, width: self.view.bounds.width, height: self.view.bounds.width / 2)
   }
   
+  // Return number of rows in table
   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     return expenses.count
   }
   
+  // Put cells with expense category and amount spent in table
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    let cell = table.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+    let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+      as! convertCurrencyCustomCell
+    cell.label.text! = Array(expenses.keys)[indexPath.row]
+    var currencySymbol = "$"
+    if currency == "cad" {
+      currencySymbol = "C$"
+    } else if currency == "yen" {
+      currencySymbol = "￥"
+    }
+    
+    cell.amount.text! = currencySymbol + String(format:"%.02f", expenses[cell.label.text!]!) //always add two numbers after decimal
     return cell
+  }
+  
+  // Convert currency based on current rates as of March 9th, 2018
+  func convertCurrency(_ switchedCurrency: String) -> Void {
+    switch currency {
+    case "usd":
+      if switchedCurrency == "cad" {
+        expenses.forEach { expenses[$0.0] = $0.1 * 1.28 }
+      } else if switchedCurrency == "yen" {
+        expenses.forEach { expenses[$0.0] = $0.1 * 106.80 }
+      }
+    case "cad":
+      if switchedCurrency == "usd" {
+        expenses.forEach { expenses[$0.0] = $0.1 * 0.78 }
+      } else if switchedCurrency == "yen" {
+        expenses.forEach { expenses[$0.0] = $0.1 * 83.38 }
+      }
+    default:
+      if switchedCurrency == "usd" {
+        expenses.forEach { expenses[$0.0] = $0.1 * 0.0094 }
+      } else if switchedCurrency == "cad" {
+        expenses.forEach { expenses[$0.0] = $0.1 * 0.012 }
+      }
+    }
   }
 }
