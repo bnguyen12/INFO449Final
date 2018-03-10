@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		34564FE12053332100046FD5 /* convertCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34564FE02053332100046FD5 /* convertCurrencyViewController.swift */; };
 		3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497717E2048FD21005BBF76 /* AppDelegate.swift */; };
 		349771812048FD21005BBF76 /* titleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771802048FD21005BBF76 /* titleViewController.swift */; };
 		349771842048FD21005BBF76 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 349771822048FD21005BBF76 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 		349771942048FD21005BBF76 /* BudgetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771932048FD21005BBF76 /* BudgetTests.swift */; };
 		3497719F2048FD21005BBF76 /* BudgetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3497719E2048FD21005BBF76 /* BudgetUITests.swift */; };
 		349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */; };
+		B4DA98CDD3272E3AF52DF183 /* Pods_Budget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A49D2B4E73304687D8242F1E /* Pods_Budget.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +37,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		34564FE02053332100046FD5 /* convertCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = convertCurrencyViewController.swift; path = Budget/convertCurrencyViewController.swift; sourceTree = SOURCE_ROOT; };
 		3497717B2048FD21005BBF76 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3497717E2048FD21005BBF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		349771802048FD21005BBF76 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewController.swift; sourceTree = "<group>"; };
+		3497717E2048FD21005BBF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Budget/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		349771802048FD21005BBF76 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = titleViewController.swift; path = Budget/titleViewController.swift; sourceTree = SOURCE_ROOT; };
 		349771832048FD21005BBF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		349771852048FD21005BBF76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		349771852048FD21005BBF76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Budget/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		349771882048FD21005BBF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3497718A2048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3497718A2048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Budget/Info.plist; sourceTree = SOURCE_ROOT; };
 		3497718F2048FD21005BBF76 /* BudgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		349771932048FD21005BBF76 /* BudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTests.swift; sourceTree = "<group>"; };
-		349771952048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		349771932048FD21005BBF76 /* BudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetTests.swift; path = BudgetTests/BudgetTests.swift; sourceTree = SOURCE_ROOT; };
+		349771952048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BudgetTests/Info.plist; sourceTree = SOURCE_ROOT; };
 		3497719A2048FD21005BBF76 /* BudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3497719E2048FD21005BBF76 /* BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetUITests.swift; sourceTree = "<group>"; };
-		349771A02048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonAnimationExtension.swift; sourceTree = "<group>"; };
+		3497719E2048FD21005BBF76 /* BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = BudgetUITests.swift; path = BudgetUITests/BudgetUITests.swift; sourceTree = SOURCE_ROOT; };
+		349771A02048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = BudgetUITests/Info.plist; sourceTree = SOURCE_ROOT; };
+		349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = buttonAnimationExtension.swift; path = Budget/buttonAnimationExtension.swift; sourceTree = SOURCE_ROOT; };
+		504CE5DD220F3A5A9159CE7B /* Pods-Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budget/Pods-Budget.debug.xcconfig"; sourceTree = "<group>"; };
+		674A5B3B27081E439A70EE97 /* Pods-Budget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Budget/Pods-Budget.release.xcconfig"; sourceTree = "<group>"; };
+		A49D2B4E73304687D8242F1E /* Pods_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B4DA98CDD3272E3AF52DF183 /* Pods_Budget.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +90,8 @@
 				349771922048FD21005BBF76 /* BudgetTests */,
 				3497719D2048FD21005BBF76 /* BudgetUITests */,
 				3497717C2048FD21005BBF76 /* Products */,
+				B1176505FEBBC8095760DD72 /* Pods */,
+				B27A0111E05BE7A8B80DD21C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -94,7 +103,7 @@
 				3497719A2048FD21005BBF76 /* BudgetUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3497717D2048FD21005BBF76 /* Budget */ = {
 			isa = PBXGroup;
@@ -102,13 +111,14 @@
 				3497717E2048FD21005BBF76 /* AppDelegate.swift */,
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
+				34564FE02053332100046FD5 /* convertCurrencyViewController.swift */,
 				349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */,
 				349771852048FD21005BBF76 /* Assets.xcassets */,
 				349771872048FD21005BBF76 /* LaunchScreen.storyboard */,
 				3497718A2048FD21005BBF76 /* Info.plist */,
 			);
 			path = Budget;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		349771922048FD21005BBF76 /* BudgetTests */ = {
 			isa = PBXGroup;
@@ -117,7 +127,7 @@
 				349771952048FD21005BBF76 /* Info.plist */,
 			);
 			path = BudgetTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3497719D2048FD21005BBF76 /* BudgetUITests */ = {
 			isa = PBXGroup;
@@ -126,6 +136,23 @@
 				349771A02048FD21005BBF76 /* Info.plist */,
 			);
 			path = BudgetUITests;
+			sourceTree = SOURCE_ROOT;
+		};
+		B1176505FEBBC8095760DD72 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				504CE5DD220F3A5A9159CE7B /* Pods-Budget.debug.xcconfig */,
+				674A5B3B27081E439A70EE97 /* Pods-Budget.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B27A0111E05BE7A8B80DD21C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A49D2B4E73304687D8242F1E /* Pods_Budget.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -135,9 +162,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 349771A32048FD21005BBF76 /* Build configuration list for PBXNativeTarget "Budget" */;
 			buildPhases = (
+				ED82BEF40EE9A0BA18DCCF99 /* [CP] Check Pods Manifest.lock */,
 				349771772048FD21005BBF76 /* Sources */,
 				349771782048FD21005BBF76 /* Frameworks */,
 				349771792048FD21005BBF76 /* Resources */,
+				7DC7868009179FC86DF9D3D4 /* [CP] Embed Pods Frameworks */,
+				407264AC5D661449458BB772 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -257,12 +287,67 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		407264AC5D661449458BB772 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Budget/Pods-Budget-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7DC7868009179FC86DF9D3D4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Budget/Pods-Budget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Budget/Pods-Budget-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		ED82BEF40EE9A0BA18DCCF99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Budget-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		349771772048FD21005BBF76 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				349771812048FD21005BBF76 /* titleViewController.swift in Sources */,
+				34564FE12053332100046FD5 /* convertCurrencyViewController.swift in Sources */,
 				349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */,
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
 			);
@@ -306,7 +391,8 @@
 				349771832048FD21005BBF76 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = Budget;
+			sourceTree = SOURCE_ROOT;
 		};
 		349771872048FD21005BBF76 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -314,7 +400,8 @@
 				349771882048FD21005BBF76 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = Budget;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
@@ -428,6 +515,7 @@
 		};
 		349771A42048FD21005BBF76 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 504CE5DD220F3A5A9159CE7B /* Pods-Budget.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -443,6 +531,7 @@
 		};
 		349771A52048FD21005BBF76 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 674A5B3B27081E439A70EE97 /* Pods-Budget.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
