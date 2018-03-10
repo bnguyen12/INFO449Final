@@ -14,9 +14,9 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
   @IBOutlet weak var table: UITableView!
   var currencies = ["usd", "cad", "yen"]
   var currency = "usd"
-  var expenses = ["Groceries": 30.33,
-                  "Automotive": 120.00,
-                  "Housing": 750.25]
+  var expenses = ["Groceries": [30.33, 100.00], //string is category, first value of array is spent amount, second value is budget amount
+                  "Automotive": [120.00, 2000.00],
+                  "Housing": [750.25, 10000.00]]
   //var currency = String() //get from segue
   
   override func viewDidLoad() {
@@ -75,7 +75,7 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
       currencySymbol = "￥"
     }
     
-    cell.amount.text! = currencySymbol + String(format:"%.02f", expenses[cell.label.text!]!) //always add two numbers after decimal
+    cell.amount.text! = currencySymbol + String(format:"%.02f", expenses[cell.label.text!]![0]) //always add two numbers after decimal
     return cell
   }
   
@@ -84,21 +84,33 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
     switch currency {
     case "usd":
       if switchedCurrency == "cad" {
-        expenses.forEach { expenses[$0.0] = $0.1 * 1.28 }
+        for key in expenses.keys {
+          expenses[key]![0] = expenses[key]![0] * 1.28
+        }
       } else if switchedCurrency == "yen" {
-        expenses.forEach { expenses[$0.0] = $0.1 * 106.80 }
+        for key in expenses.keys {
+          expenses[key]![0] = expenses[key]![0] * 106.80
+        }
       }
     case "cad":
       if switchedCurrency == "usd" {
-        expenses.forEach { expenses[$0.0] = $0.1 * 0.78 }
+        for key in expenses.keys {
+          expenses[key]![0] = expenses[key]![0] * 0.78
+        }
       } else if switchedCurrency == "yen" {
-        expenses.forEach { expenses[$0.0] = $0.1 * 83.38 }
+        for key in expenses.keys {
+          expenses[key]![0] = expenses[key]![0] * 83.38
+        }
       }
     default:
       if switchedCurrency == "usd" {
-        expenses.forEach { expenses[$0.0] = $0.1 * 0.0094 }
+        for key in expenses.keys {
+          expenses[key]![0] = expenses[key]![0] * 0.0094
+        }
       } else if switchedCurrency == "cad" {
-        expenses.forEach { expenses[$0.0] = $0.1 * 0.012 }
+        for key in expenses.keys {
+          expenses[key]![0] = expenses[key]![0] * 0.012
+        }
       }
     }
   }
