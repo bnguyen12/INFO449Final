@@ -14,13 +14,15 @@ class addNewExpensesViewController: UIViewController {
   @IBOutlet weak var inputAmount: UITextField!
   @IBOutlet var expenseInput: [UIButton]!
   @IBOutlet weak var categoryText: UILabel!
-  var expenseAmount = Double()
+  @IBOutlet weak var budgetLeftLabel: UILabel!
   var nums = ["0", ".", "0", "0"]
-  var categories = ["Groceries", "Leisure", "Automotive"] //temp data
+  var expenses = ["Groceries": [35.00, 100.00], //"Category": [spent, budget]
+                    "Leisure": [120.38, 200.00],
+                    "Automotive": [250.00, 1000.50]]
   var category = "Groceries" //temp data
   var currency = "$" //temp data
   let dropdown = DropDown()
-  //var categories = [String]
+  //var expenses = [String: [Double]]
   //var currency = String()
   //var category = String()
   
@@ -32,8 +34,9 @@ class addNewExpensesViewController: UIViewController {
     dropdown.backgroundColor = UIColor(red:0.72, green:0.86, blue:0.69, alpha:1.0)
     dropdown.cornerRadius = 15
     dropdown.anchorView = view
-    dropdown.dataSource = categories
+    dropdown.dataSource = Array(expenses.keys)
     dropdown.bottomOffset = CGPoint(x: 0, y: dropdown.plainView.bounds.height + 120)
+    budgetLeftLabel.text! = "Budget left: \(currency)\(expenses[category]![1] - expenses[category]![0])"
   }
   
   // Open drop down menu and store the selected item into the category variable
@@ -42,6 +45,8 @@ class addNewExpensesViewController: UIViewController {
     dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
       self.category = item
       self.categoryText.text = item
+      self.budgetLeftLabel.text! = "Budget left:"
+      self.budgetLeftLabel.text! += "\(self.currency)\(self.expenses[self.category]![1] - self.expenses[self.category]![0])"
     }
   }
   
@@ -71,8 +76,9 @@ class addNewExpensesViewController: UIViewController {
         nums[0] = "0"
       }
     } else { //OK is pressed
-      inputAmount.text!.remove(at: inputAmount.text!.startIndex)
-      expenseAmount = Double(inputAmount.text!)!
+      inputAmount.text!.remove(at: inputAmount.text!.startIndex) //remove dollar symbol to turn into a double
+      expenses[category]![0] = expenses[category]![0] + Double(inputAmount.text!)!
+      budgetLeftLabel.text! = "Budget left: \(currency)\(expenses[category]![1] - expenses[category]![0])"
     }
     inputAmount.text! = currency + nums.joined()
   }

@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 48;
+	objectVersion = 46;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -34,7 +34,7 @@
 
 /* Begin PBXFileReference section */
 		017E6C0D922F889ABD88A4D81A3AFE14 /* Pods-Budget-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Budget-resources.sh"; sourceTree = "<group>"; };
-		0D6DEB11B706370C2A788264B0162E9D /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = DropDown.framework; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D6DEB11B706370C2A788264B0162E9D /* DropDown.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = DropDown.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ED49121EACBF25F0B79AE50A9492B53 /* DropDown-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "DropDown-dummy.m"; sourceTree = "<group>"; };
 		19C14D87F7297AF349E7ADA44BE26AE6 /* Pods-Budget-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Budget-frameworks.sh"; sourceTree = "<group>"; };
 		1C2F6F8638EF2697FFA510AB88E2A649 /* DropDown-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-prefix.pch"; sourceTree = "<group>"; };
@@ -44,13 +44,13 @@
 		5510E266AEF0B40B48A80E3CB91544D3 /* DPDUIView+Extension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DPDUIView+Extension.swift"; path = "DropDown/helpers/DPDUIView+Extension.swift"; sourceTree = "<group>"; };
 		594D37211BC57875D653C48FA14B7290 /* DropDownCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DropDownCell.swift; path = DropDown/src/DropDownCell.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		69A4DCF2741626551451B2961D9C8791 /* Pods_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Budget.framework; path = "Pods-Budget.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69A4DCF2741626551451B2961D9C8791 /* Pods_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		786DF43B2169384CE3C64C5859341B57 /* Pods-Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Budget.debug.xcconfig"; sourceTree = "<group>"; };
 		79F3A93E203DDDAB2AAAA37622101BF7 /* Pods-Budget-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Budget-dummy.m"; sourceTree = "<group>"; };
 		85DD7C30CE5900EB2272E149B7854B37 /* DropDown-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "DropDown-umbrella.h"; sourceTree = "<group>"; };
 		8D0996996373CCF2DCB457948EA5EEA9 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8EFB0E0C97AE5C000802E611303960D7 /* Pods-Budget-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Budget-umbrella.h"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9A80B7208C41CB2FAB2AAC5210977AFF /* Pods-Budget-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Budget-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B7464F803CE6D2F05834D41AA661483F /* DPDKeyboardListener.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DPDKeyboardListener.swift; path = DropDown/helpers/DPDKeyboardListener.swift; sourceTree = "<group>"; };
 		CEF5D1FBE1612861B4952E9F5B252830 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -94,7 +94,6 @@
 				F465362865FDD449A779C7B70F1B8D05 /* Resources */,
 				CEB127D4F75946455E8D769259280AB8 /* Support Files */,
 			);
-			name = DropDown;
 			path = DropDown;
 			sourceTree = "<group>";
 		};
@@ -123,7 +122,7 @@
 				69A4DCF2741626551451B2961D9C8791 /* Pods_Budget.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
 			isa = PBXGroup;
@@ -142,7 +141,7 @@
 				4CED36F913E2A055D58D63F7F154578E /* DropDown */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
 			isa = PBXGroup;
@@ -150,7 +149,7 @@
 				D35AF013A5F0BAD4F32504907A52519E /* iOS */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		C272913D81973C5E23645CEDD8F7953A /* Targets Support Files */ = {
 			isa = PBXGroup;
@@ -158,7 +157,7 @@
 				5F9D8F4D4EA238C5C03702DA01C749FF /* Pods-Budget */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		CEB127D4F75946455E8D769259280AB8 /* Support Files */ = {
 			isa = PBXGroup;

@@ -646,7 +646,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eyv-l1-EOf">
-                                <rect key="frame" x="20" y="314" width="335" height="53.5"/>
+                                <rect key="frame" x="20" y="313.5" width="335" height="53.5"/>
                                 <attributedString key="attributedText">
                                     <fragment content="$0.00">
                                         <attributes>
@@ -672,25 +672,70 @@
                                     <action selector="clickCategory:" destination="BdW-h1-BpT" eventType="touchUpInside" id="PHV-GM-4bv"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="y5m-CR-gQb">
+                                <rect key="frame" x="20" y="189" width="335" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Budget left: $100.00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Yoa-r6-EHF">
+                                <rect key="frame" x="15" y="69" width="345" height="4"/>
+                                <color key="backgroundColor" red="0.43097293376922607" green="0.62674731016159058" blue="0.36073726415634155" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="hTp-qw-QDz"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="UYa-Mi-UNS" firstAttribute="top" secondItem="QpC-dK-0RK" secondAttribute="bottom" id="3jx-Y9-mHd"/>
                             <constraint firstItem="UYa-Mi-UNS" firstAttribute="centerX" secondItem="v65-6S-bRm" secondAttribute="centerX" id="6aC-TQ-tAq"/>
                             <constraint firstItem="hKn-Ka-Eo6" firstAttribute="bottom" secondItem="H1Z-x7-o7i" secondAttribute="bottom" constant="20" id="7lM-cd-otx"/>
+                            <constraint firstItem="y5m-CR-gQb" firstAttribute="leading" secondItem="hKn-Ka-Eo6" secondAttribute="leading" constant="20" id="9KQ-g2-Aqq"/>
                             <constraint firstItem="hKn-Ka-Eo6" firstAttribute="trailing" secondItem="H1Z-x7-o7i" secondAttribute="trailing" id="9yG-C8-vIC"/>
                             <constraint firstItem="QpC-dK-0RK" firstAttribute="top" secondItem="hKn-Ka-Eo6" secondAttribute="top" id="IoY-ka-3Qs"/>
+                            <constraint firstItem="hKn-Ka-Eo6" firstAttribute="trailing" secondItem="Yoa-r6-EHF" secondAttribute="trailing" constant="15" id="LzR-Ds-V2w"/>
+                            <constraint firstItem="Yoa-r6-EHF" firstAttribute="leading" secondItem="hKn-Ka-Eo6" secondAttribute="leading" constant="15" id="OfC-rO-T4o"/>
                             <constraint firstItem="H1Z-x7-o7i" firstAttribute="centerX" secondItem="v65-6S-bRm" secondAttribute="centerX" id="Q74-2N-KT3"/>
                             <constraint firstItem="QpC-dK-0RK" firstAttribute="leading" secondItem="hKn-Ka-Eo6" secondAttribute="leading" id="VNl-hg-ZC6"/>
                             <constraint firstItem="hKn-Ka-Eo6" firstAttribute="trailing" secondItem="QpC-dK-0RK" secondAttribute="trailing" id="Wug-mN-mV7"/>
+                            <constraint firstItem="UYa-Mi-UNS" firstAttribute="top" secondItem="Yoa-r6-EHF" secondAttribute="bottom" constant="-3.5" id="Xx4-gb-weo"/>
+                            <constraint firstItem="Yoa-r6-EHF" firstAttribute="top" secondItem="QpC-dK-0RK" secondAttribute="bottom" constant="-1" id="bWB-yI-jlf"/>
                             <constraint firstItem="H1Z-x7-o7i" firstAttribute="top" secondItem="eyv-l1-EOf" secondAttribute="bottom" constant="20" id="cmD-I0-0Xj"/>
                             <constraint firstItem="hKn-Ka-Eo6" firstAttribute="trailing" secondItem="eyv-l1-EOf" secondAttribute="trailing" constant="20" id="fsi-ls-0g9"/>
+                            <constraint firstItem="y5m-CR-gQb" firstAttribute="centerX" secondItem="v65-6S-bRm" secondAttribute="centerX" id="nEF-uN-Lrt"/>
+                            <constraint firstItem="hKn-Ka-Eo6" firstAttribute="trailing" secondItem="y5m-CR-gQb" secondAttribute="trailing" constant="20" id="o7Z-Ft-msn"/>
                             <constraint firstItem="H1Z-x7-o7i" firstAttribute="leading" secondItem="hKn-Ka-Eo6" secondAttribute="leading" id="quM-mg-KRd"/>
                             <constraint firstItem="eyv-l1-EOf" firstAttribute="leading" secondItem="hKn-Ka-Eo6" secondAttribute="leading" constant="20" id="wHd-45-XGv"/>
+                            <constraint firstItem="y5m-CR-gQb" firstAttribute="top" secondItem="UYa-Mi-UNS" secondAttribute="bottom" constant="69.5" id="yGn-C9-biw"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hKn-Ka-Eo6"/>
                     </view>
                     <connections>
+                        <outlet property="budgetLeftLabel" destination="y5m-CR-gQb" id="ckx-Ko-xBY"/>
                         <outlet property="categoryText" destination="QpC-dK-0RK" id="X7a-ih-v8n"/>
                         <outlet property="inputAmount" destination="eyv-l1-EOf" id="yo0-ju-T1k"/>
                         <outletCollection property="expenseInput" destination="m8w-mb-sUQ" collectionClass="NSMutableArray" id="tsW-Fe-RUd"/>
@@ -709,7 +754,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cI8-rk-5dn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969" y="134"/>
+            <point key="canvasLocation" x="968.79999999999995" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

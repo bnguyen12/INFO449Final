@@ -38,21 +38,21 @@
 
 /* Begin PBXFileReference section */
 		2E9294DF1E0355524393F0CB /* Pods-Budget.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Budget/Pods-Budget.debug.xcconfig"; sourceTree = "<group>"; };
-		343322402050BCD200119478 /* addNewExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addNewExpensesViewController.swift; sourceTree = "<group>"; };
+		343322402050BCD200119478 /* addNewExpensesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = addNewExpensesViewController.swift; path = Budget/addNewExpensesViewController.swift; sourceTree = SOURCE_ROOT; };
 		3497717B2048FD21005BBF76 /* Budget.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Budget.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		3497717E2048FD21005BBF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		349771802048FD21005BBF76 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = titleViewController.swift; sourceTree = "<group>"; };
+		3497717E2048FD21005BBF76 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = Budget/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
+		349771802048FD21005BBF76 /* titleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = titleViewController.swift; path = Budget/titleViewController.swift; sourceTree = SOURCE_ROOT; };
 		349771832048FD21005BBF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		349771852048FD21005BBF76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		349771852048FD21005BBF76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Budget/Assets.xcassets; sourceTree = SOURCE_ROOT; };
 		349771882048FD21005BBF76 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		3497718A2048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3497718A2048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Budget/Info.plist; sourceTree = SOURCE_ROOT; };
 		3497718F2048FD21005BBF76 /* BudgetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		349771932048FD21005BBF76 /* BudgetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetTests.swift; sourceTree = "<group>"; };
 		349771952048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3497719A2048FD21005BBF76 /* BudgetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BudgetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		3497719E2048FD21005BBF76 /* BudgetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetUITests.swift; sourceTree = "<group>"; };
 		349771A02048FD21005BBF76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = buttonAnimationExtension.swift; sourceTree = "<group>"; };
+		349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = buttonAnimationExtension.swift; path = Budget/buttonAnimationExtension.swift; sourceTree = SOURCE_ROOT; };
 		6BEEAFD0D6791834B774DAD7 /* Pods-Budget.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Budget.release.xcconfig"; path = "Pods/Target Support Files/Pods-Budget/Pods-Budget.release.xcconfig"; sourceTree = "<group>"; };
 		78225839351304169C62D424 /* Pods_Budget.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Budget.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -103,7 +103,7 @@
 				3497719A2048FD21005BBF76 /* BudgetUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3497717D2048FD21005BBF76 /* Budget */ = {
 			isa = PBXGroup;
@@ -118,7 +118,7 @@
 				3497718A2048FD21005BBF76 /* Info.plist */,
 			);
 			path = Budget;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		349771922048FD21005BBF76 /* BudgetTests */ = {
 			isa = PBXGroup;
@@ -127,7 +127,7 @@
 				349771952048FD21005BBF76 /* Info.plist */,
 			);
 			path = BudgetTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3497719D2048FD21005BBF76 /* BudgetUITests */ = {
 			isa = PBXGroup;
@@ -136,7 +136,7 @@
 				349771A02048FD21005BBF76 /* Info.plist */,
 			);
 			path = BudgetUITests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		617802EE2DFE28D01F3B8B0C /* Frameworks */ = {
 			isa = PBXGroup;
@@ -144,7 +144,7 @@
 				78225839351304169C62D424 /* Pods_Budget.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		E5DCB11AA9F9C0A27BF5E458 /* Pods */ = {
 			isa = PBXGroup;
@@ -153,7 +153,7 @@
 				6BEEAFD0D6791834B774DAD7 /* Pods-Budget.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -394,7 +394,8 @@
 				349771832048FD21005BBF76 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
+			path = Budget;
+			sourceTree = SOURCE_ROOT;
 		};
 		349771872048FD21005BBF76 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -402,7 +403,8 @@
 				349771882048FD21005BBF76 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
+			path = Budget;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXVariantGroup section */
 
