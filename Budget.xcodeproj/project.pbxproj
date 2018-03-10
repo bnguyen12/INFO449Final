@@ -148,7 +148,7 @@
 				674A5B3B27081E439A70EE97 /* Pods-Budget.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		B27A0111E05BE7A8B80DD21C /* Frameworks */ = {
 			isa = PBXGroup;
@@ -156,7 +156,7 @@
 				A49D2B4E73304687D8242F1E /* Pods_Budget.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
