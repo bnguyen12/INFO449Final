@@ -18,6 +18,7 @@
 		42DF940C2050BE0300D6C18E /* BudgetListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940B2050BE0300D6C18E /* BudgetListViewController.swift */; };
 		42DF940E2050C02600D6C18E /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940D2050C02600D6C18E /* Budget.swift */; };
 		42DF94102050C0A000D6C18E /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940F2050C0A000D6C18E /* Expense.swift */; };
+		42E51DA92055DA83004987C0 /* makeBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E51DA82055DA83004987C0 /* makeBudgetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		42DF940B2050BE0300D6C18E /* BudgetListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BudgetListViewController.swift; sourceTree = "<group>"; };
 		42DF940D2050C02600D6C18E /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		42DF940F2050C0A000D6C18E /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
+		42E51DA82055DA83004987C0 /* makeBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeBudgetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +110,7 @@
 				3497717E2048FD21005BBF76 /* AppDelegate.swift */,
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
+				42E51DA82055DA83004987C0 /* makeBudgetViewController.swift */,
 				42DF940D2050C02600D6C18E /* Budget.swift */,
 				42DF940F2050C0A000D6C18E /* Expense.swift */,
 				349771AC204905E9005BBF76 /* buttonAnimationExtension.swift */,
@@ -273,6 +276,7 @@
 			files = (
 				42DF94102050C0A000D6C18E /* Expense.swift in Sources */,
 				349771812048FD21005BBF76 /* titleViewController.swift in Sources */,
+				42E51DA92055DA83004987C0 /* makeBudgetViewController.swift in Sources */,
 				349771AD204905E9005BBF76 /* buttonAnimationExtension.swift in Sources */,
 				42DF940E2050C02600D6C18E /* Budget.swift in Sources */,
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
@@ -443,10 +447,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K7SVFKA2W6;
+				DEVELOPMENT_TEAM = 2LP484FJCE;
 				INFOPLIST_FILE = Budget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.bennyn.Budget;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.lisakoss.Budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -458,10 +462,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = K7SVFKA2W6;
+				DEVELOPMENT_TEAM = 2LP484FJCE;
 				INFOPLIST_FILE = Budget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.bennyn.Budget;
+				PRODUCT_BUNDLE_IDENTIFIER = edu.uw.lisakoss.Budget;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
