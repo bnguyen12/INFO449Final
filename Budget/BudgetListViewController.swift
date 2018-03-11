@@ -21,7 +21,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         let budgetName = budgets[indexPath.row]
         
         cell.textLabel?.text = budgetName.budgetTitle
-        cell.detailTextLabel?.text = budgetName.budgetDescription
+        cell.detailTextLabel?.text = budgetName.budgetType
         
         return cell
     }
@@ -41,7 +41,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         
         let expense1 = Expense(expense: "$2.03", spentOn: "Food");
         
-        let budget1 = Budget(budgetTitle: "Grocery", budgetDescription: "Weekly food shopping.", expenses:[expense1])
+        let budget1 = Budget(budgetTitle: "Grocery", budgetType: "Weekly", expenses:[expense1])
         
         budgets = [budget1]
 

@@ -10,12 +10,12 @@ import UIKit
 
 class Budget: NSObject {
     var budgetTitle:String = ""
-    var budgetDescription:String = ""
+    var budgetType:String = ""
     var expenses:[Expense] = []
     
-    init(budgetTitle:String, budgetDescription:String, expenses:[Expense]) {
+    init(budgetTitle:String, budgetType:String, expenses:[Expense]) {
         self.budgetTitle = budgetTitle
-        self.budgetDescription = budgetDescription
+        self.budgetType = budgetType
         self.expenses = expenses
     }
 }
