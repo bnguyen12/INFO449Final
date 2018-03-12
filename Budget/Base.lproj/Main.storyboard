@@ -250,10 +250,12 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xk-bKj">
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xk-bKj">
                                 <rect key="frame" x="167" y="473" width="40" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="SEND"/>
+                                <connections>
+                                    <action selector="pressSend:" destination="fzb-Y4-ajc" eventType="touchUpInside" id="Kjb-id-Pjb"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqt-Y6-94j">
                                 <rect key="frame" x="0.0" y="170" width="375" height="33"/>
@@ -279,9 +281,12 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="iDC-j6-BEq" secondAttribute="trailing" id="BXx-G6-frn"/>
+                            <constraint firstItem="iDC-j6-BEq" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="LXe-mY-eQe"/>
                             <constraint firstItem="Mqt-Y6-94j" firstAttribute="top" secondItem="iDC-j6-BEq" secondAttribute="bottom" constant="100" id="May-m7-QHw"/>
+                            <constraint firstItem="Mqt-Y6-94j" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="UNO-ba-n4a"/>
                             <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="Mqt-Y6-94j" secondAttribute="trailing" id="Vle-mX-3ow"/>
                             <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="odN-j2-Egd" secondAttribute="trailing" constant="20" id="XKC-Zw-2SZ"/>
+                            <constraint firstItem="gpd-xk-bKj" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="Zaa-fc-XDt"/>
                             <constraint firstItem="iDC-j6-BEq" firstAttribute="top" secondItem="0Pv-QN-2sW" secondAttribute="top" id="a3S-A3-oR5"/>
                             <constraint firstItem="odN-j2-Egd" firstAttribute="leading" secondItem="0Pv-QN-2sW" secondAttribute="leading" constant="20" id="cKJ-hf-axq"/>
                             <constraint firstItem="Mqt-Y6-94j" firstAttribute="leading" secondItem="0Pv-QN-2sW" secondAttribute="leading" id="d0b-F8-z6n"/>
