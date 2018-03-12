@@ -29,6 +29,10 @@ class budgetInfoViewController: UIViewController {
     }
     
     @IBAction func viewHistory(_ sender: UIButton) {
+        let spendingHistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "spendingHistoryViewController") as! spendingHistoryViewController
+        spendingHistoryViewController.budgets = self.budgets;
+        spendingHistoryViewController.budget = self.budget;
+        self.present(spendingHistoryViewController, animated: true, completion: nil)
     }
     
     @IBAction func convertCurr(_ sender: UIButton) {
