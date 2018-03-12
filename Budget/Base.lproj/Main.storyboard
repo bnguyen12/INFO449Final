@@ -675,7 +675,7 @@
                                     <color key="titleColor" red="0.55482476950000004" green="0.76899653670000001" blue="0.51571291689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="bg4-zY-mN7" kind="show" id="srT-Ru-bgQ"/>
+                                    <action selector="submitCurrency:" destination="vgj-yN-dkr" eventType="touchUpInside" id="vKG-Kl-QWr"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Budget Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lxG-tz-wAO">
@@ -722,6 +722,9 @@
                         <viewLayoutGuide key="safeArea" id="ap2-VT-9m0"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Budgets" id="otp-nH-zwh"/>
+                    <connections>
+                        <outlet property="currencyPicker" destination="iEA-j8-mxw" id="KOv-At-xup"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vvc-HQ-u0O" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1156,7 +1159,7 @@
         <!--Budgets-->
         <scene sceneID="5IU-SN-KVE">
             <objects>
-                <viewController id="bg4-zY-mN7" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="budgetAmountViewController" id="bg4-zY-mN7" customClass="budgetAmountViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="pwO-BL-Kzk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1875,7 +1878,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
+        <segue reference="YVb-Qv-AYo"/>
         <segue reference="N5M-A4-fai"/>
-        <segue reference="srT-Ru-bgQ"/>
     </inferredMetricsTieBreakers>
 </document>
