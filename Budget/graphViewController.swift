@@ -21,10 +21,10 @@ class graphViewController: UIViewController {
     
     
     @IBAction func backBtn(_ sender: UIButton) {
-        let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
-        budgetInfoViewController.budgets = self.budgets;
-        budgetInfoViewController.budget = self.budget;
-        self.present(budgetInfoViewController, animated: true, completion: nil)
+        let spendingHistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "spendingHistoryViewController") as! spendingHistoryViewController
+        spendingHistoryViewController.budgets = self.budgets;
+        spendingHistoryViewController.budget = self.budget;
+        self.present(spendingHistoryViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

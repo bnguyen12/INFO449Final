@@ -110,44 +110,123 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
             if switchedCurrency == "cad" {
                 //for budget in budgets {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-                    newAmount = newAmount * 1.28
-                    budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "C$";
+                    if let budgetAmount = budget?.budgetAmount, var newBudgetAmount = Double(budgetAmount) {
+                        newAmount = newAmount * 1.28;
+                        newBudgetAmount = newBudgetAmount * 1.28;
+                        
+                        budget?.moneyLeftAmount = String(newAmount);
+                        budget?.budgetAmount = String(newBudgetAmount);
+                        budget?.budgetCurrencyType = "cad";
+                        
+                        var newExpenses:[Expense] = [];
+                        for expense in (budget?.expenses)! {
+                            let newExpense = Double(expense.expense)! * 1.28;
+                            let addExpense = Expense(expense: String(newExpense), spentOn: expense.spentOn)
+                            newExpenses.append(addExpense);
+                        }
+                        budget?.expenses = newExpenses;
+                    }
                 }
                //}
             } else if switchedCurrency == "yen" {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-                    newAmount = newAmount * 106.80
-                    budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "￥";
+                    if let budgetAmount = budget?.budgetAmount, var newBudgetAmount = Double(budgetAmount) {
+                        newAmount = newAmount * 106.80;
+                        newBudgetAmount = newBudgetAmount * 106.80;
+                        
+                        budget?.moneyLeftAmount = String(newAmount);
+                        budget?.budgetAmount = String(newBudgetAmount);
+                        budget?.budgetCurrencyType = "yen";
+                        
+                        var newExpenses:[Expense] = [];
+                        for expense in (budget?.expenses)! {
+                            let newExpense = Double(expense.expense)! * 106.80;
+                            let addExpense = Expense(expense: String(newExpense), spentOn: expense.spentOn)
+                            newExpenses.append(addExpense);
+                        }
+                        budget?.expenses = newExpenses;
+                    }
                 }
             }
         case "cad":
             if switchedCurrency == "usd" {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-                    newAmount = newAmount * 0.78
-                    budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "$";
+                    if let budgetAmount = budget?.budgetAmount, var newBudgetAmount = Double(budgetAmount) {
+                        newAmount = newAmount * 0.78;
+                        newBudgetAmount = newBudgetAmount * 0.78;
+                        
+                        budget?.moneyLeftAmount = String(newAmount);
+                        budget?.budgetAmount = String(newBudgetAmount);
+                        budget?.budgetCurrencyType = "usd";
+                        
+                        var newExpenses:[Expense] = [];
+                        for expense in (budget?.expenses)! {
+                            let newExpense = Double(expense.expense)! * 0.78;
+                            let addExpense = Expense(expense: String(newExpense), spentOn: expense.spentOn)
+                            newExpenses.append(addExpense);
+                        }
+                        budget?.expenses = newExpenses;
+                    }
                 }
+                
             } else if switchedCurrency == "yen" {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-                    newAmount = newAmount * 83.38
-                    budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "￥";
+                    if let budgetAmount = budget?.budgetAmount, var newBudgetAmount = Double(budgetAmount) {
+                        newAmount = newAmount * 83.38;
+                        newBudgetAmount = newBudgetAmount * 83.38;
+                        
+                        budget?.moneyLeftAmount = String(newAmount);
+                        budget?.budgetAmount = String(newBudgetAmount);
+                        budget?.budgetCurrencyType = "yen";
+                        
+                        var newExpenses:[Expense] = [];
+                        for expense in (budget?.expenses)! {
+                            let newExpense = Double(expense.expense)! * 83.38;
+                            let addExpense = Expense(expense: String(newExpense), spentOn: expense.spentOn)
+                            newExpenses.append(addExpense);
+                        }
+                        budget?.expenses = newExpenses;
+                    }
                 }
             }
         default:
             if switchedCurrency == "usd" {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-                    newAmount = newAmount * 0.0094
-                    budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "$";
+                    if let budgetAmount = budget?.budgetAmount, var newBudgetAmount = Double(budgetAmount) {
+                        newAmount = newAmount * 0.0094;
+                        newBudgetAmount = newBudgetAmount * 0.0094;
+                        
+                        budget?.moneyLeftAmount = String(newAmount);
+                        budget?.budgetAmount = String(newBudgetAmount);
+                        budget?.budgetCurrencyType = "usd";
+                        
+                        var newExpenses:[Expense] = [];
+                        for expense in (budget?.expenses)! {
+                            let newExpense = Double(expense.expense)! * 0.0094;
+                            let addExpense = Expense(expense: String(newExpense), spentOn: expense.spentOn)
+                            newExpenses.append(addExpense);
+                        }
+                        budget?.expenses = newExpenses;
+                    }
                 }
             } else if switchedCurrency == "cad" {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-                    newAmount = newAmount * 0.012
-                    budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "C$";
+                    if let budgetAmount = budget?.budgetAmount, var newBudgetAmount = Double(budgetAmount) {
+                        newAmount = newAmount * 0.012;
+                        newBudgetAmount = newBudgetAmount * 0.012;
+                        
+                        budget?.moneyLeftAmount = String(newAmount);
+                        budget?.budgetAmount = String(newBudgetAmount);
+                        budget?.budgetCurrencyType = "cad";
+                        
+                        var newExpenses:[Expense] = [];
+                        for expense in (budget?.expenses)! {
+                            let newExpense = Double(expense.expense)! * 0.012;
+                            let addExpense = Expense(expense: String(newExpense), spentOn: expense.spentOn)
+                            newExpenses.append(addExpense);
+                        }
+                        budget?.expenses = newExpenses;
+                    }
                 }
             }
         }

@@ -75,21 +75,12 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
         budgetNameLabel.text = budget?.budgetName;
         budgetTypeLabel.text = budget?.budgetType;
         
-        if(!(budget?.expenses.isEmpty)!) {
-            if(budget?.expenses[0].spentOn != "already spent") {
-                if let amountLeft = budget?.moneyLeftAmount, let newAmountLeft = Double(amountLeft) {
-                    if let budgetAmount = budget?.budgetAmount, let newBudgetAmount = Double(budgetAmount) {
-                        budgetSpentLabel.text = currencyVal + String(newBudgetAmount - newAmountLeft) + " spent";
-                        
-                        budget?.expenses.append(Expense(expense: String(newBudgetAmount - newAmountLeft), spentOn: "already spent"));
-                    }
-                }
+        
+        if let moneyLeft = budget?.moneyLeftAmount, let left = Double(moneyLeft) {
+            if let budgetTotal = budget?.budgetAmount, let total = Double(budgetTotal) {
+                budgetSpentLabel.text = currencyVal + String(total - left) + " spent";
             }
         }
-        
-    
-        
-        // Do any additional setup after loading the view.
     }
 
     override func didReceiveMemoryWarning() {

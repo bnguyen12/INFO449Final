@@ -16,6 +16,7 @@ class moneyLeftViewController: UIViewController {
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
     var daysLeft:Int = 0;
+    var expenses:[Expense] = [];
     
     @IBOutlet weak var continueBtn: UIButton!
     
@@ -64,8 +65,15 @@ class moneyLeftViewController: UIViewController {
             continueBtn.alpha = 1.0;
             moneyLeftOnScreen.setTitle(moneyLeftAmount, for: .normal);
         }
+    
     }
+    
     @IBAction func submitMoneyLeft(_ sender: UIButton) {
+        let spent = Double( Double(budgetAmount)! - Double(moneyLeftAmount)!);
+        
+        let expense = Expense(expense: String(spent), spentOn: "already spent");
+        expenses.append(expense);
+        
         let budgetListController = self.storyboard?.instantiateViewController(withIdentifier: "budgetListController") as! BudgetListViewController
         budgetListController.budgets = self.budgets;
         budgetListController.budgetName = self.budgetName;
@@ -74,6 +82,7 @@ class moneyLeftViewController: UIViewController {
         budgetListController.budgetAmount = self.budgetAmount;
         budgetListController.moneyLeftAmount = self.moneyLeftAmount;
         budgetListController.daysLeft = self.daysLeft;
+        budgetListController.expenses = self.expenses;
         self.present(budgetListController, animated: true, completion: nil)
     }
     

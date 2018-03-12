@@ -17,6 +17,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
     var budgetAmount: String = "";
     var moneyLeftAmount: String = "";
     var daysLeft:Int = 0;
+    var expenses:[Expense] = [];
     
     var budgets: [Budget] = [];
 
@@ -56,7 +57,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         budgetCategories.delegate = self
         budgetCategories.tableFooterView = UIView() // makes the table the height of the view
         
-        let budget = Budget(budgetName: budgetName, budgetType: budgetType, budgetCurrencyType: budgetCurrencyType, budgetAmount: budgetAmount, moneyLeftAmount: moneyLeftAmount, daysLeft: daysLeft, expenses:[]) 
+        let budget = Budget(budgetName: budgetName, budgetType: budgetType, budgetCurrencyType: budgetCurrencyType, budgetAmount: budgetAmount, moneyLeftAmount: moneyLeftAmount, daysLeft: daysLeft, expenses: expenses)
         
         if(budget.budgetName != "") {
             budgets.append(budget)
