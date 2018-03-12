@@ -14,7 +14,23 @@ class budgetAmountViewController: UIViewController {
     var budgetType: String = "";
     var budgetStartDate: String = "";
     var budgetCurrencyType: String = "";
-
+    
+    //button ctrls
+    @IBOutlet weak var continueBtn: UIButton!
+    
+    var budgetAmount = ""
+    @IBOutlet weak var budgetAmountScreen: UIButton!
+    
+    @IBAction func addBudgetAmount(_ sender: UIButton) {
+        let addBudgetAmountController = self.storyboard?.instantiateViewController(withIdentifier: "addBudgetAmountViewController") as! addBudgetAmountViewController
+        addBudgetAmountController.budgetName = self.budgetName;
+        addBudgetAmountController.budgetType = self.budgetType;
+        addBudgetAmountController.budgetStartDate = self.budgetStartDate;
+        addBudgetAmountController.budgetCurrencyType = self.budgetCurrencyType
+        addBudgetAmountController.budgetAmount = self.budgetAmount;
+        self.present(addBudgetAmountController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -22,24 +38,23 @@ class budgetAmountViewController: UIViewController {
         print(budgetType);
         print(budgetStartDate);
         print(budgetCurrencyType);
+        print(budgetAmount);
+    
 
         // Do any additional setup after loading the view.
+        if budgetAmount == "" {
+            continueBtn.isEnabled = false;
+            continueBtn.alpha = 0.4;
+            budgetAmountScreen.titleLabel?.text = "0.00";
+        } else {
+            continueBtn.isEnabled = true;
+            continueBtn.alpha = 1.0;
+            budgetAmountScreen.setTitle(budgetAmount, for: .normal);
+        }
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -55,7 +55,7 @@ class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIP
         // Connect data:
         self.datePicker.delegate = self
         self.datePicker.dataSource = self
-        datePickerData = ["Today", "First of Month", "Last of Month"];
+        datePickerData = ["", "Today", "First of Month", "Last of Month"];
 
         // Do any additional setup after loading the view.
     }
