@@ -223,7 +223,7 @@
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--Budgets-->
+        <!--My Budgets-->
         <scene sceneID="SbN-3d-8Vc">
             <objects>
                 <viewController storyboardIdentifier="budgetListController" id="SCP-BL-yYW" customClass="BudgetListViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
@@ -309,7 +309,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dG8-JZ-L97"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Budgets" id="dLz-Gy-zMZ"/>
+                    <tabBarItem key="tabBarItem" title="My Budgets" id="dLz-Gy-zMZ"/>
                     <connections>
                         <outlet property="budgetCategories" destination="iUP-Yu-GGO" id="LQA-Wq-VLT"/>
                     </connections>
@@ -317,22 +317,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="j7a-IF-gNf" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="832.79999999999995" y="-556.37181409295351"/>
-        </scene>
-        <!--Add -->
-        <scene sceneID="lZb-QO-uBL">
-            <objects>
-                <viewController id="joi-HW-R3I" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="aUU-Gi-2N3">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Mam-YO-myo"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Add " id="yEQ-lF-p2e"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Awu-5n-TOM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="834" y="-1221"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="u35-SN-aWj">
@@ -346,6 +330,7 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Gvr-h7-8zH"/>
                         <segue destination="SCP-BL-yYW" kind="relationship" relationship="viewControllers" id="uhs-ML-fyJ"/>
+                        <segue destination="PGF-dO-lrY" kind="relationship" relationship="viewControllers" id="U2B-wk-bYS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ek-f8-OKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1788,6 +1773,541 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4f8-Lh-rW0" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="5907" y="-558"/>
+        </scene>
+        <!--Add Expenses-->
+        <scene sceneID="Oei-ea-sD0">
+            <objects>
+                <viewController id="PGF-dO-lrY" customClass="addNewExpensesViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="RDq-QA-fcE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELQ-4m-Ju0">
+                                <rect key="frame" x="0.0" y="20" width="414" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="GLV-Mm-w1N"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="CategoryPlaceHolder">
+                                        <attributes>
+                                            <color key="NSColor" red="0.36862745098039218" green="0.63529411764705879" blue="0.32549019607843138" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qKJ-t0-gCc">
+                                <rect key="frame" x="0.0" y="407" width="414" height="260"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SeO-HT-ChT">
+                                        <rect key="frame" x="102" y="0.0" width="210" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NBR-rZ-mZI">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="1E5-Nj-NpA"/>
+                                                    <constraint firstAttribute="height" constant="50" id="A12-ZY-eVX"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="1">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="Hg1-Na-zBD"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vp4-Bm-oem">
+                                                <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Lmv-eL-8zK"/>
+                                                    <constraint firstAttribute="height" constant="50" id="pGN-IH-ut7"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="2">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="OLF-1H-T1S"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="e8e-ny-TBf">
+                                                <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="40I-fN-ixG"/>
+                                                    <constraint firstAttribute="width" constant="50" id="uJi-Wd-q8u"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="3">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="Rp2-Kt-Jsm"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="1dM-Eu-N9h">
+                                        <rect key="frame" x="102" y="70" width="210" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bm1-B6-Qg8">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="IqJ-BX-xiZ"/>
+                                                    <constraint firstAttribute="height" constant="50" id="Wmv-i1-bnE"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="4">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="bjq-IH-OhU"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nzf-m4-vtx">
+                                                <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="MSq-ta-FP2"/>
+                                                    <constraint firstAttribute="width" constant="50" id="ifM-af-t3q"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="5">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="g99-Zm-IFC"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j3X-Gf-tDh">
+                                                <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="Ov9-dO-a3d"/>
+                                                    <constraint firstAttribute="height" constant="50" id="kJJ-sE-Ugl"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="6">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="gRl-Ou-JcP"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="K4C-nF-11p">
+                                        <rect key="frame" x="102" y="140" width="210" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="duH-Lo-3Po">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Rvg-Xz-Ra9"/>
+                                                    <constraint firstAttribute="width" constant="50" id="rp9-pK-84T"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="7">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="tOC-TF-3eh"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hjP-ew-rey">
+                                                <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="KG0-v3-XM4"/>
+                                                    <constraint firstAttribute="height" constant="50" id="OHb-qa-ZLC"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="8">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="Wi3-d5-Waq"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GVQ-3o-atx">
+                                                <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="3qM-Xc-Zid"/>
+                                                    <constraint firstAttribute="height" constant="50" id="kcS-iE-YAY"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="9">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="ZdX-9P-EwY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="Cqc-TG-P8X">
+                                        <rect key="frame" x="102" y="210" width="210" height="50"/>
+                                        <subviews>
+                                            <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zhh-Y0-eYB">
+                                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="TXn-w8-b1d"/>
+                                                    <constraint firstAttribute="width" constant="50" id="aXX-0L-u7c"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="⇠">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="64" name="Menlo-Regular"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="nBB-WL-K9Q"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5AK-ZM-OyL">
+                                                <rect key="frame" x="80" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="1H1-hP-lBQ"/>
+                                                    <constraint firstAttribute="width" constant="50" id="vry-fu-IR9"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="0">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="yKH-xg-ev6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-ou-a4M">
+                                                <rect key="frame" x="160" y="0.0" width="50" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="50" id="H3H-5G-qVV"/>
+                                                    <constraint firstAttribute="height" constant="50" id="qa3-ue-1gV"/>
+                                                </constraints>
+                                                <state key="normal">
+                                                    <attributedString key="attributedTitle">
+                                                        <fragment content="OK">
+                                                            <attributes>
+                                                                <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                <font key="NSFont" size="18" name="AvenirNext-Heavy"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="clipping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                    </attributedString>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="NGU-BC-9mD"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra6-bb-L5d">
+                                <rect key="frame" x="20" y="333.66666666666669" width="374" height="53.333333333333314"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="$0.00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74509803921568629" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE7-tv-YJr">
+                                <rect key="frame" x="182" y="69.666666666666671" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="6H6-JA-sSW"/>
+                                    <constraint firstAttribute="width" constant="50" id="7c5-vM-F2v"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="▼">
+                                    <color key="titleColor" red="0.43097293380000001" green="0.62674731019999996" blue="0.36073726420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCategory:" destination="PGF-dO-lrY" eventType="touchUpInside" id="WsO-gY-gtQ"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="V02-tT-9Tp">
+                                <rect key="frame" x="20" y="189" width="374" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Budget left: $100.00">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvX-ZR-cRw">
+                                <rect key="frame" x="15" y="69" width="384" height="4"/>
+                                <color key="backgroundColor" red="0.43097293380000001" green="0.62674731019999996" blue="0.36073726420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="zWK-pL-Pxa"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="ELQ-4m-Ju0" secondAttribute="trailing" id="0LO-2X-oYX"/>
+                            <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="XvX-ZR-cRw" secondAttribute="trailing" constant="15" id="4e5-mx-9Od"/>
+                            <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="V02-tT-9Tp" secondAttribute="trailing" constant="20" id="Dub-vR-caM"/>
+                            <constraint firstItem="ELQ-4m-Ju0" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" id="Fkd-DM-QoH"/>
+                            <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="qKJ-t0-gCc" secondAttribute="trailing" id="H4z-8s-bGk"/>
+                            <constraint firstItem="qKJ-t0-gCc" firstAttribute="top" secondItem="ra6-bb-L5d" secondAttribute="bottom" constant="20" id="K0K-4w-kRu"/>
+                            <constraint firstItem="V02-tT-9Tp" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" constant="20" id="LuD-Mt-mDD"/>
+                            <constraint firstItem="nE7-tv-YJr" firstAttribute="top" secondItem="XvX-ZR-cRw" secondAttribute="bottom" constant="-3.5" id="OLX-Bt-5nB"/>
+                            <constraint firstItem="ELQ-4m-Ju0" firstAttribute="top" secondItem="YU0-fQ-02A" secondAttribute="top" id="TZm-iF-roX"/>
+                            <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="ra6-bb-L5d" secondAttribute="trailing" constant="20" id="UPn-l0-QEH"/>
+                            <constraint firstItem="qKJ-t0-gCc" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" id="bML-g9-JAl"/>
+                            <constraint firstItem="V02-tT-9Tp" firstAttribute="centerX" secondItem="RDq-QA-fcE" secondAttribute="centerX" id="cTA-ct-Zb5"/>
+                            <constraint firstItem="YU0-fQ-02A" firstAttribute="bottom" secondItem="qKJ-t0-gCc" secondAttribute="bottom" constant="20" id="gvc-1Y-M1j"/>
+                            <constraint firstItem="ra6-bb-L5d" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" constant="20" id="je4-oQ-kRg"/>
+                            <constraint firstItem="V02-tT-9Tp" firstAttribute="top" secondItem="nE7-tv-YJr" secondAttribute="bottom" constant="69.5" id="mvT-Io-TeB"/>
+                            <constraint firstItem="qKJ-t0-gCc" firstAttribute="centerX" secondItem="RDq-QA-fcE" secondAttribute="centerX" id="pkH-tS-t5Y"/>
+                            <constraint firstItem="nE7-tv-YJr" firstAttribute="centerX" secondItem="RDq-QA-fcE" secondAttribute="centerX" id="ssV-9c-oRF"/>
+                            <constraint firstItem="XvX-ZR-cRw" firstAttribute="top" secondItem="ELQ-4m-Ju0" secondAttribute="bottom" constant="-1" id="vnf-06-pNK"/>
+                            <constraint firstItem="nE7-tv-YJr" firstAttribute="top" secondItem="ELQ-4m-Ju0" secondAttribute="bottom" id="x5H-QB-dgs"/>
+                            <constraint firstItem="XvX-ZR-cRw" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" constant="15" id="zNm-Qm-nYz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YU0-fQ-02A"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Add Expenses" id="rKk-6t-X0n"/>
+                    <connections>
+                        <outlet property="budgetLeftLabel" destination="V02-tT-9Tp" id="C7j-ul-URi"/>
+                        <outlet property="categoryText" destination="ELQ-4m-Ju0" id="MGK-9Q-QCe"/>
+                        <outlet property="inputAmount" destination="ra6-bb-L5d" id="edS-AV-ttq"/>
+                        <outletCollection property="expenseInput" destination="NBR-rZ-mZI" collectionClass="NSMutableArray" id="b9n-lk-skn"/>
+                        <outletCollection property="expenseInput" destination="vp4-Bm-oem" collectionClass="NSMutableArray" id="vup-2k-hyE"/>
+                        <outletCollection property="expenseInput" destination="e8e-ny-TBf" collectionClass="NSMutableArray" id="94A-j2-0RA"/>
+                        <outletCollection property="expenseInput" destination="bm1-B6-Qg8" collectionClass="NSMutableArray" id="kod-GZ-Udd"/>
+                        <outletCollection property="expenseInput" destination="Nzf-m4-vtx" collectionClass="NSMutableArray" id="5jR-il-Jac"/>
+                        <outletCollection property="expenseInput" destination="j3X-Gf-tDh" collectionClass="NSMutableArray" id="7Of-B3-AGU"/>
+                        <outletCollection property="expenseInput" destination="duH-Lo-3Po" collectionClass="NSMutableArray" id="zVw-kr-VeI"/>
+                        <outletCollection property="expenseInput" destination="hjP-ew-rey" collectionClass="NSMutableArray" id="Jqv-3f-LAb"/>
+                        <outletCollection property="expenseInput" destination="GVQ-3o-atx" collectionClass="NSMutableArray" id="4lP-eu-QNJ"/>
+                        <outletCollection property="expenseInput" destination="5AK-ZM-OyL" collectionClass="NSMutableArray" id="1ni-Yg-3we"/>
+                        <outletCollection property="expenseInput" destination="zhh-Y0-eYB" collectionClass="NSMutableArray" id="arv-E3-gCl"/>
+                        <outletCollection property="expenseInput" destination="lVv-ou-a4M" collectionClass="NSMutableArray" id="Ze6-fh-69Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="f2O-sj-tg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="832" y="-1255"/>
         </scene>
     </scenes>
 </document>
