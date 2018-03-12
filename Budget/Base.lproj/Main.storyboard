@@ -250,13 +250,6 @@
                                 </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xk-bKj">
-                                <rect key="frame" x="167" y="473" width="40" height="30"/>
-                                <state key="normal" title="SEND"/>
-                                <connections>
-                                    <action selector="pressSend:" destination="fzb-Y4-ajc" eventType="touchUpInside" id="Kjb-id-Pjb"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqt-Y6-94j">
                                 <rect key="frame" x="0.0" y="170" width="375" height="33"/>
                                 <attributedString key="attributedText">
@@ -277,12 +270,61 @@
                                     <constraint firstAttribute="height" constant="3" id="uTH-pa-Dgn"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Afc-wd-5gH">
+                                <rect key="frame" x="172" y="213" width="30" height="44"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="26"/>
+                                <state key="normal" title="▼">
+                                    <color key="titleColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickCategory:" destination="fzb-Y4-ajc" eventType="touchUpInside" id="JCw-Tu-JJc"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JvL-oM-XjH">
+                                <rect key="frame" x="114" y="337" width="148" height="25"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Current category">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="18" name="AvenirNext-Bold"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xk-bKj">
+                                <rect key="frame" x="145" y="465" width="84" height="53"/>
+                                <color key="backgroundColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="Kex-KK-GcB"/>
+                                    <constraint firstAttribute="width" constant="84" id="iED-SY-vMJ"/>
+                                </constraints>
+                                <state key="normal">
+                                    <attributedString key="attributedTitle">
+                                        <fragment content="SEND">
+                                            <attributes>
+                                                <color key="NSColor" red="0.97836284541853658" green="0.979896414832781" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <font key="NSFont" size="14" name="AvenirNext-Bold"/>
+                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                            </attributes>
+                                        </fragment>
+                                    </attributedString>
+                                </state>
+                                <connections>
+                                    <action selector="pressSend:" destination="fzb-Y4-ajc" eventType="touchUpInside" id="Kjb-id-Pjb"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Afc-wd-5gH" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="2PJ-IB-FGK"/>
                             <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="iDC-j6-BEq" secondAttribute="trailing" id="BXx-G6-frn"/>
+                            <constraint firstItem="JvL-oM-XjH" firstAttribute="top" secondItem="Afc-wd-5gH" secondAttribute="bottom" constant="80" id="JbD-9m-sSU"/>
                             <constraint firstItem="iDC-j6-BEq" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="LXe-mY-eQe"/>
+                            <constraint firstItem="0Pv-QN-2sW" firstAttribute="bottom" secondItem="gpd-xk-bKj" secondAttribute="bottom" constant="149" id="M78-Ka-9Jm"/>
                             <constraint firstItem="Mqt-Y6-94j" firstAttribute="top" secondItem="iDC-j6-BEq" secondAttribute="bottom" constant="100" id="May-m7-QHw"/>
+                            <constraint firstItem="Afc-wd-5gH" firstAttribute="top" secondItem="Mqt-Y6-94j" secondAttribute="bottom" constant="10" id="OgB-PH-5wB"/>
+                            <constraint firstItem="JvL-oM-XjH" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="T5X-6Y-lye"/>
                             <constraint firstItem="Mqt-Y6-94j" firstAttribute="centerX" secondItem="Doj-gi-zba" secondAttribute="centerX" id="UNO-ba-n4a"/>
                             <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="Mqt-Y6-94j" secondAttribute="trailing" id="Vle-mX-3ow"/>
                             <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="odN-j2-Egd" secondAttribute="trailing" constant="20" id="XKC-Zw-2SZ"/>
@@ -295,6 +337,10 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="0Pv-QN-2sW"/>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="JvL-oM-XjH" id="Cl1-zn-hmm"/>
+                        <outlet property="sendBtn" destination="gpd-xk-bKj" id="7mh-Nn-fOX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gbh-E2-gNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
