@@ -113,9 +113,10 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func back(_ sender: UIButton) {
-        let budgetListController = self.storyboard?.instantiateViewController(withIdentifier: "budgetListController") as! BudgetListViewController
-        budgetListController.budgets = self.budgets;
-        self.present(budgetListController, animated: true, completion: nil)
+        let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
+        budgetInfoViewController.budgets = self.budgets;
+        budgetInfoViewController.budget = self.budget;
+        self.present(budgetInfoViewController, animated: true, completion: nil)
     }
     
     func textFieldShouldReturn(_ expenseName: UITextField) -> Bool {
