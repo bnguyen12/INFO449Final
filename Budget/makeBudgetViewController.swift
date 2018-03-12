@@ -9,7 +9,7 @@
 import UIKit
 
 class makeBudgetViewController: UIViewController, UITextFieldDelegate {
-
+    
     @IBOutlet weak var budgetName: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
     
@@ -29,6 +29,12 @@ class makeBudgetViewController: UIViewController, UITextFieldDelegate {
         return false
     }
     
+    @IBAction func submitName(_ sender: UIButton) {
+        let budgetTypeController = self.storyboard?.instantiateViewController(withIdentifier: "budgetTypeViewController") as! budgetTypeViewController
+        budgetTypeController.budgetName = self.budgetName.text!
+        print("???")
+        self.present(budgetTypeController, animated: true, completion: nil)
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
