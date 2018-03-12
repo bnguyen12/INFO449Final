@@ -32,6 +32,14 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
         return cell
     }
     
+    
+    @IBAction func graphButton(_ sender: UIButton) {
+        let graphViewController = self.storyboard?.instantiateViewController(withIdentifier: "graphViewController") as! graphViewController
+        graphViewController.budgets = self.budgets;
+        graphViewController.budget = self.budget;
+        self.present(graphViewController, animated: true, completion: nil)
+    }
+    
     @IBAction func backButton(_ sender: UIButton) {
         let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
         budgetInfoViewController.budgets = self.budgets;

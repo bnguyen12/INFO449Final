@@ -32,6 +32,7 @@
 		42E756DB20568EF6000805DD /* convertCurrencyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E756DA20568EF6000805DD /* convertCurrencyViewController.swift */; };
 		42E756DD20568F0D000805DD /* convertCurrencyCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E756DC20568F0D000805DD /* convertCurrencyCustomCell.swift */; };
 		42E756DF20569B89000805DD /* spendingHistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E756DE20569B89000805DD /* spendingHistoryViewController.swift */; };
+		42E756E12056A7C2000805DD /* graphViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E756E02056A7C2000805DD /* graphViewController.swift */; };
 		444063ED6A0F41348A514BC4 /* Pods_BudgetUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B59A675930B362CB26C509 /* Pods_BudgetUITests.framework */; };
 		C8D2EA5D060C79E3EE40F25E /* Pods_Budget.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E06FE316E046A3129382BAC /* Pods_Budget.framework */; };
 /* End PBXBuildFile section */
@@ -86,6 +87,7 @@
 		42E756DA20568EF6000805DD /* convertCurrencyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertCurrencyViewController.swift; sourceTree = "<group>"; };
 		42E756DC20568F0D000805DD /* convertCurrencyCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = convertCurrencyCustomCell.swift; sourceTree = "<group>"; };
 		42E756DE20569B89000805DD /* spendingHistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = spendingHistoryViewController.swift; sourceTree = "<group>"; };
+		42E756E02056A7C2000805DD /* graphViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = graphViewController.swift; sourceTree = "<group>"; };
 		4ED74BE30506C9F42452FE9F /* Pods-BudgetUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudgetUITests/Pods-BudgetUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		51B59A675930B362CB26C509 /* Pods_BudgetUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BudgetUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		713C7AA7654D74A916E98827 /* Pods-BudgetTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BudgetTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BudgetTests/Pods-BudgetTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 				3497717E2048FD21005BBF76 /* AppDelegate.swift */,
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
+				42E756E02056A7C2000805DD /* graphViewController.swift */,
 				42E756D820566608000805DD /* budgetInfoViewController.swift */,
 				42DFEF58205657BF00AB52DD /* addNewExpensesViewController.swift */,
 				42DFEF542056425900AB52DD /* moneyLeftViewController.swift */,
@@ -377,11 +380,13 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Budget/Pods-Budget-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Charts/Charts.framework",
 				"${BUILT_PRODUCTS_DIR}/CircleMenu/CircleMenu.framework",
 				"${BUILT_PRODUCTS_DIR}/DropDown/DropDown.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Charts.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CircleMenu.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DropDown.framework",
 			);
@@ -528,6 +533,7 @@
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
 				42DFEF572056426400AB52DD /* addMoneyLeftViewController.swift in Sources */,
 				42DF940C2050BE0300D6C18E /* BudgetListViewController.swift in Sources */,
+				42E756E12056A7C2000805DD /* graphViewController.swift in Sources */,
 				42E756DF20569B89000805DD /* spendingHistoryViewController.swift in Sources */,
 				42E756D920566608000805DD /* budgetInfoViewController.swift in Sources */,
 			);

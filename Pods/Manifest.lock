@@ -1,15 +1,20 @@
 PODS:
+  - Charts (3.0.5):
+    - Charts/Core (= 3.0.5)
+  - Charts/Core (3.0.5)
   - CircleMenu (3.0.4)
   - DropDown (2.3.1)
 
 DEPENDENCIES:
+  - Charts
   - CircleMenu
   - DropDown
 
 SPEC CHECKSUMS:
+  Charts: 45cdc985b764c838b35ee47eb1365d15735f6d1a
   CircleMenu: 0f589199f154e4ce93e0831ce3462950f59510fd
   DropDown: 20499c7b2731b0d21609af924e47c7677a2be50d
 
-PODFILE CHECKSUM: 748c9fc403a04c7ff26b8f8aa143596870fcaff3
+PODFILE CHECKSUM: ca8421c3c88583a84143b7c99221e3c71661cafe
 
 COCOAPODS: 1.4.0
