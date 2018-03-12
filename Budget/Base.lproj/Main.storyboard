@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fzb-Y4-ajc">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -221,6 +221,79 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--Message View Controller-->
+        <scene sceneID="jst-7d-aie">
+            <objects>
+                <viewController id="fzb-Y4-ajc" customClass="messageViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Doj-gi-zba">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDC-j6-BEq">
+                                <rect key="frame" x="0.0" y="20" width="375" height="50"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Share">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="Budget">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-UltraLightItalic"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gpd-xk-bKj">
+                                <rect key="frame" x="167" y="473" width="40" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="SEND"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mqt-Y6-94j">
+                                <rect key="frame" x="0.0" y="170" width="375" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Choose a budget:">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="odN-j2-Egd">
+                                <rect key="frame" x="20" y="75" width="335" height="3"/>
+                                <color key="backgroundColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="3" id="uTH-pa-Dgn"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="iDC-j6-BEq" secondAttribute="trailing" id="BXx-G6-frn"/>
+                            <constraint firstItem="Mqt-Y6-94j" firstAttribute="top" secondItem="iDC-j6-BEq" secondAttribute="bottom" constant="100" id="May-m7-QHw"/>
+                            <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="Mqt-Y6-94j" secondAttribute="trailing" id="Vle-mX-3ow"/>
+                            <constraint firstItem="0Pv-QN-2sW" firstAttribute="trailing" secondItem="odN-j2-Egd" secondAttribute="trailing" constant="20" id="XKC-Zw-2SZ"/>
+                            <constraint firstItem="iDC-j6-BEq" firstAttribute="top" secondItem="0Pv-QN-2sW" secondAttribute="top" id="a3S-A3-oR5"/>
+                            <constraint firstItem="odN-j2-Egd" firstAttribute="leading" secondItem="0Pv-QN-2sW" secondAttribute="leading" constant="20" id="cKJ-hf-axq"/>
+                            <constraint firstItem="Mqt-Y6-94j" firstAttribute="leading" secondItem="0Pv-QN-2sW" secondAttribute="leading" id="d0b-F8-z6n"/>
+                            <constraint firstItem="odN-j2-Egd" firstAttribute="top" secondItem="iDC-j6-BEq" secondAttribute="bottom" constant="5" id="gdg-o1-2Yg"/>
+                            <constraint firstItem="iDC-j6-BEq" firstAttribute="leading" secondItem="0Pv-QN-2sW" secondAttribute="leading" id="zlQ-mO-goM"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0Pv-QN-2sW"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Gbh-E2-gNn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="888.79999999999995" y="132.68365817091455"/>
         </scene>
     </scenes>
 </document>
