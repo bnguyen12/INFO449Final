@@ -7,6 +7,7 @@ target 'Budget' do
 
   # Pods for Budget
 	pod 'DropDown'
+	pod 'CircleMenu'
 
   target 'BudgetTests' do
     inherit! :search_paths

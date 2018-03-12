@@ -31,6 +31,14 @@ class budgetInfoViewController: UIViewController {
     @IBAction func viewHistory(_ sender: UIButton) {
     }
     
+    @IBAction func convertCurr(_ sender: UIButton) {
+        let convertCurrencyController = self.storyboard?.instantiateViewController(withIdentifier: "convertCurrencyController") as! convertCurrencyViewController
+        convertCurrencyController.budgets = self.budgets;
+        convertCurrencyController.budget = self.budget;
+        self.present(convertCurrencyController, animated: true, completion: nil)
+    }
+    
+    
     @IBAction func sendSMS(_ sender: UIButton) {
     }
     

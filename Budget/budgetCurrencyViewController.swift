@@ -66,7 +66,7 @@ class budgetCurrencyViewController: UIViewController, UIPickerViewDelegate, UIPi
         // Connect data:
         self.currencyPicker.delegate = self
         self.currencyPicker.dataSource = self
-        currencyPickerData = ["", "USD", "CAD", "YEN"];
+        currencyPickerData = ["", "usd", "cad", "yen"];
 
         // Do any additional setup after loading the view.
     }

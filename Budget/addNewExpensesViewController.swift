@@ -21,13 +21,11 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
     @IBAction func expenseInput(_ sender: Any) {
     }
     
-    
     var nums = ["0", ".", "0", "0"]
     
     //passed variables
     var budgets: [Budget] = [];
     var budget: Budget?;
-    
     
     //var expenses = ["Groceries": [35.00, 100.00], //"Category": [spent, budget]
        // "Leisure": [120.38, 200.00],
