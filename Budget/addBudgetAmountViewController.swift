@@ -13,7 +13,6 @@ class addBudgetAmountViewController: UIViewController {
     var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
-    var budgetStartDate: String = "";
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
     
@@ -26,7 +25,6 @@ class addBudgetAmountViewController: UIViewController {
         budgetAmountController.budgets = self.budgets;
         budgetAmountController.budgetName = self.budgetName;
         budgetAmountController.budgetType = self.budgetType;
-        budgetAmountController.budgetStartDate = self.budgetStartDate;
         budgetAmountController.budgetCurrencyType = self.budgetCurrencyType
         budgetAmountController.budgetAmount = self.budgetAmount;
         self.present(budgetAmountController, animated: true, completion: nil)

@@ -330,7 +330,6 @@
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="Gvr-h7-8zH"/>
                         <segue destination="SCP-BL-yYW" kind="relationship" relationship="viewControllers" id="uhs-ML-fyJ"/>
-                        <segue destination="PGF-dO-lrY" kind="relationship" relationship="viewControllers" id="U2B-wk-bYS"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2ek-f8-OKN" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -525,7 +524,7 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                                 <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                                <state key="normal" title="Payday">
+                                                <state key="normal" title="Payday (bi-weekly)">
                                                     <color key="titleColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 </state>
                                                 <connections>
@@ -565,81 +564,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g0Z-Nj-Qsa" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2255" y="-557"/>
-        </scene>
-        <!--Budgets-->
-        <scene sceneID="vgr-Ic-v2d">
-            <objects>
-                <viewController storyboardIdentifier="budgetStartDateViewController" id="Frb-oF-rcg" customClass="budgetStartDateViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="w8s-Lv-f1Z">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" alpha="0.40000000000000002" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WNb-hi-EsJ">
-                                <rect key="frame" x="0.0" y="674" width="414" height="62"/>
-                                <color key="backgroundColor" red="0.95630282160000002" green="0.97703963520000003" blue="0.95207780600000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="62" id="jRU-fG-LbO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
-                                <state key="normal" title="Continue">
-                                    <color key="titleColor" red="0.55482476950000004" green="0.76899653670000001" blue="0.51571291689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="submitDate:" destination="Frb-oF-rcg" eventType="touchUpInside" id="b98-NB-TrK"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Budget Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksq-wV-9qR">
-                                <rect key="frame" x="131" y="20" width="152" height="21.666666666666671"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <color key="textColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="STD-lN-6tc">
-                                <rect key="frame" x="20" y="236.66666666666666" width="374" height="262.66666666666674"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Start Date" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bPP-og-uPF">
-                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
-                                        <color key="textColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="What day of the month do you want your budget to start?" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xpl-tF-zti">
-                                        <rect key="frame" x="0.0" y="26.333333333333343" width="374" height="20.333333333333329"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9Tq-ud-Cd9">
-                                        <rect key="frame" x="0.0" y="46.666666666666657" width="374" height="215.99999999999997"/>
-                                    </pickerView>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <color key="backgroundColor" red="0.71790766719999999" green="0.86199480299999998" blue="0.69218844180000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                        <constraints>
-                            <constraint firstItem="STD-lN-6tc" firstAttribute="centerY" secondItem="w8s-Lv-f1Z" secondAttribute="centerY" id="APC-6g-MDo"/>
-                            <constraint firstItem="STD-lN-6tc" firstAttribute="leading" secondItem="RZy-Jz-NLk" secondAttribute="leading" constant="20" id="AeB-OJ-9Ol"/>
-                            <constraint firstItem="WNb-hi-EsJ" firstAttribute="trailing" secondItem="RZy-Jz-NLk" secondAttribute="trailing" id="QgM-Qt-POM"/>
-                            <constraint firstItem="ksq-wV-9qR" firstAttribute="leading" secondItem="RZy-Jz-NLk" secondAttribute="leading" constant="131" id="RZC-nn-2th"/>
-                            <constraint firstItem="RZy-Jz-NLk" firstAttribute="trailing" secondItem="ksq-wV-9qR" secondAttribute="trailing" constant="131" id="TTf-oZ-T2I"/>
-                            <constraint firstItem="RZy-Jz-NLk" firstAttribute="trailing" secondItem="STD-lN-6tc" secondAttribute="trailing" constant="20" id="em2-RY-Fx9"/>
-                            <constraint firstItem="ksq-wV-9qR" firstAttribute="top" secondItem="RZy-Jz-NLk" secondAttribute="top" id="ew1-js-s45"/>
-                            <constraint firstItem="STD-lN-6tc" firstAttribute="centerX" secondItem="w8s-Lv-f1Z" secondAttribute="centerX" id="hBV-mo-c2y"/>
-                            <constraint firstItem="WNb-hi-EsJ" firstAttribute="bottom" secondItem="RZy-Jz-NLk" secondAttribute="bottom" id="jUp-0f-9dj"/>
-                            <constraint firstItem="WNb-hi-EsJ" firstAttribute="leading" secondItem="RZy-Jz-NLk" secondAttribute="leading" id="rRy-b5-LJb"/>
-                            <constraint firstItem="STD-lN-6tc" firstAttribute="centerX" secondItem="w8s-Lv-f1Z" secondAttribute="centerX" id="s9w-Vn-582"/>
-                        </constraints>
-                        <viewLayoutGuide key="safeArea" id="RZy-Jz-NLk"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="Budgets" id="q3N-OW-2gS"/>
-                    <connections>
-                        <outlet property="continueBtn" destination="WNb-hi-EsJ" id="prZ-fQ-lC0"/>
-                        <outlet property="datePicker" destination="9Tq-ud-Cd9" id="qyF-QN-Yd9"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="KxL-rv-1g5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2984" y="-558"/>
         </scene>
         <!--Budgets-->
         <scene sceneID="r3P-dE-OfZ">
@@ -725,7 +649,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Budget Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sPv-tx-i7X">
-                                <rect key="frame" x="131" y="20.666666666666664" width="152" height="21.666666666666664"/>
+                                <rect key="frame" x="131" y="20" width="152" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1254,7 +1178,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Budget Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ohb-xu-Pdd">
-                                <rect key="frame" x="131" y="20.666666666666664" width="152" height="21.666666666666664"/>
+                                <rect key="frame" x="131" y="20" width="152" height="21.666666666666671"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
@@ -1777,7 +1701,7 @@
         <!--Add Expenses-->
         <scene sceneID="Oei-ea-sD0">
             <objects>
-                <viewController id="PGF-dO-lrY" customClass="addNewExpensesViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="addNewExpensesController" id="PGF-dO-lrY" customClass="addNewExpensesViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="RDq-QA-fcE">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1799,7 +1723,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="qKJ-t0-gCc">
-                                <rect key="frame" x="0.0" y="407" width="414" height="260"/>
+                                <rect key="frame" x="0.0" y="456" width="414" height="260"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="SeO-HT-ChT">
                                         <rect key="frame" x="102" y="0.0" width="210" height="50"/>
@@ -2198,7 +2122,7 @@
                                 </subviews>
                             </stackView>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ra6-bb-L5d">
-                                <rect key="frame" x="20" y="333.66666666666669" width="374" height="53.333333333333314"/>
+                                <rect key="frame" x="20" y="382.66666666666669" width="374" height="53.333333333333314"/>
                                 <attributedString key="attributedText">
                                     <fragment content="$0.00">
                                         <attributes>
@@ -2209,6 +2133,23 @@
                                     </fragment>
                                 </attributedString>
                                 <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" usesAttributedText="YES" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xGg-6T-aHU">
+                                <rect key="frame" x="20" y="341" width="374" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Expense name">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74509803921568629" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="36" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="right" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="expenseInput:" destination="PGF-dO-lrY" eventType="editingDidEnd" id="9vD-B0-s3a"/>
+                                </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nE7-tv-YJr">
                                 <rect key="frame" x="182" y="69.666666666666671" width="50" height="50"/>
@@ -2248,6 +2189,30 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="q7F-D8-fHi">
+                                <rect key="frame" x="95.666666666666686" y="239" width="223" height="33"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Time left: 20 days">
+                                        <attributes>
+                                            <color key="NSColor" red="0.74488925933837891" green="0.85702413320541382" blue="0.70978462696075439" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="24" name="AvenirNext-Heavy"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="truncatingTail" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" red="0.74488925930000005" green="0.85702413320000004" blue="0.709784627" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XvX-ZR-cRw">
                                 <rect key="frame" x="15" y="69" width="384" height="4"/>
                                 <color key="backgroundColor" red="0.43097293380000001" green="0.62674731019999996" blue="0.36073726420000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -2260,11 +2225,20 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6pE-35-wSA">
+                                <rect key="frame" x="21" y="89" width="34" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="back:" destination="PGF-dO-lrY" eventType="touchUpInside" id="wNd-R0-ELX"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="ELQ-4m-Ju0" secondAttribute="trailing" id="0LO-2X-oYX"/>
                             <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="XvX-ZR-cRw" secondAttribute="trailing" constant="15" id="4e5-mx-9Od"/>
+                            <constraint firstItem="q7F-D8-fHi" firstAttribute="top" secondItem="V02-tT-9Tp" secondAttribute="bottom" constant="17" id="Diz-2g-ttj"/>
                             <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="V02-tT-9Tp" secondAttribute="trailing" constant="20" id="Dub-vR-caM"/>
                             <constraint firstItem="ELQ-4m-Ju0" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" id="Fkd-DM-QoH"/>
                             <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="qKJ-t0-gCc" secondAttribute="trailing" id="H4z-8s-bGk"/>
@@ -2273,6 +2247,7 @@
                             <constraint firstItem="nE7-tv-YJr" firstAttribute="top" secondItem="XvX-ZR-cRw" secondAttribute="bottom" constant="-3.5" id="OLX-Bt-5nB"/>
                             <constraint firstItem="ELQ-4m-Ju0" firstAttribute="top" secondItem="YU0-fQ-02A" secondAttribute="top" id="TZm-iF-roX"/>
                             <constraint firstItem="YU0-fQ-02A" firstAttribute="trailing" secondItem="ra6-bb-L5d" secondAttribute="trailing" constant="20" id="UPn-l0-QEH"/>
+                            <constraint firstItem="q7F-D8-fHi" firstAttribute="centerX" secondItem="RDq-QA-fcE" secondAttribute="centerX" id="VuM-3N-sQ4"/>
                             <constraint firstItem="qKJ-t0-gCc" firstAttribute="leading" secondItem="YU0-fQ-02A" secondAttribute="leading" id="bML-g9-JAl"/>
                             <constraint firstItem="V02-tT-9Tp" firstAttribute="centerX" secondItem="RDq-QA-fcE" secondAttribute="centerX" id="cTA-ct-Zb5"/>
                             <constraint firstItem="YU0-fQ-02A" firstAttribute="bottom" secondItem="qKJ-t0-gCc" secondAttribute="bottom" constant="20" id="gvc-1Y-M1j"/>
@@ -2290,7 +2265,9 @@
                     <connections>
                         <outlet property="budgetLeftLabel" destination="V02-tT-9Tp" id="C7j-ul-URi"/>
                         <outlet property="categoryText" destination="ELQ-4m-Ju0" id="MGK-9Q-QCe"/>
+                        <outlet property="expenseName" destination="xGg-6T-aHU" id="s9N-sc-YS1"/>
                         <outlet property="inputAmount" destination="ra6-bb-L5d" id="edS-AV-ttq"/>
+                        <outlet property="timeLeft" destination="q7F-D8-fHi" id="eOW-M6-e06"/>
                         <outletCollection property="expenseInput" destination="NBR-rZ-mZI" collectionClass="NSMutableArray" id="b9n-lk-skn"/>
                         <outletCollection property="expenseInput" destination="vp4-Bm-oem" collectionClass="NSMutableArray" id="vup-2k-hyE"/>
                         <outletCollection property="expenseInput" destination="e8e-ny-TBf" collectionClass="NSMutableArray" id="94A-j2-0RA"/>
@@ -2308,6 +2285,117 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="f2O-sj-tg8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="832" y="-1255"/>
+        </scene>
+        <!--Budgets-->
+        <scene sceneID="CzA-gY-jzL">
+            <objects>
+                <viewController storyboardIdentifier="budgetInfoViewController" id="YBb-dK-MGz" customClass="budgetInfoViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="chM-hM-NcB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="9fW-AY-4qh">
+                                <rect key="frame" x="20" y="275" width="374" height="186.33333333333337"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4jv-x4-zAN">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="26.333333333333332"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="equalSpacing" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="hc6-SD-i5u">
+                                        <rect key="frame" x="0.0" y="26.333333333333314" width="374" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YiL-gg-P93">
+                                                <rect key="frame" x="0.0" y="0.0" width="374" height="50"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="Zac-EE-mV3"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Add Expenses">
+                                                    <color key="titleColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addExpenses:" destination="YBb-dK-MGz" eventType="touchUpInside" id="DaH-1g-ZTK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X86-xp-k1g">
+                                                <rect key="frame" x="0.0" y="55" width="374" height="50"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="isf-pP-nYI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="View Spending History">
+                                                    <color key="titleColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="viewHistory:" destination="YBb-dK-MGz" eventType="touchUpInside" id="B3k-mA-uvj"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2Z-rZ-3no">
+                                                <rect key="frame" x="0.0" y="110" width="374" height="50"/>
+                                                <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="P5S-tP-tCh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <color key="tintColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="titleEdgeInsets" minX="11" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                <state key="normal" title="Send SMS">
+                                                    <color key="titleColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="sendSMS:" destination="YBb-dK-MGz" eventType="touchUpInside" id="vrh-J6-701"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Budget Information" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="txD-vM-RzD">
+                                <rect key="frame" x="129" y="20" width="155.33333333333337" height="21.666666666666671"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <color key="textColor" red="0.3863139572" green="0.3863139572" blue="0.3863139572" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="g3h-wH-DJR">
+                                <rect key="frame" x="20" y="20" width="40" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <state key="normal" title="Back"/>
+                                <connections>
+                                    <action selector="backButton:" destination="YBb-dK-MGz" eventType="touchUpInside" id="ykc-KB-vfy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.71790766719999999" green="0.86199480299999998" blue="0.69218844180000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9fW-AY-4qh" firstAttribute="centerY" secondItem="chM-hM-NcB" secondAttribute="centerY" id="Eqb-zZ-Qs1"/>
+                            <constraint firstItem="txD-vM-RzD" firstAttribute="centerX" secondItem="chM-hM-NcB" secondAttribute="centerX" id="HBh-03-Vuz"/>
+                            <constraint firstItem="txD-vM-RzD" firstAttribute="top" secondItem="JOF-8k-1xg" secondAttribute="top" id="Kqs-d0-ijw"/>
+                            <constraint firstItem="g3h-wH-DJR" firstAttribute="leading" secondItem="JOF-8k-1xg" secondAttribute="leading" constant="20" id="W2e-aG-kwi"/>
+                            <constraint firstItem="JOF-8k-1xg" firstAttribute="trailing" secondItem="9fW-AY-4qh" secondAttribute="trailing" constant="20" id="YJL-MP-etD"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="g3h-wH-DJR" secondAttribute="trailing" constant="20" symbolic="YES" id="b5l-9F-0lW"/>
+                            <constraint firstItem="g3h-wH-DJR" firstAttribute="top" secondItem="JOF-8k-1xg" secondAttribute="top" id="cfI-Ma-wuN"/>
+                            <constraint firstItem="9fW-AY-4qh" firstAttribute="centerX" secondItem="chM-hM-NcB" secondAttribute="centerX" id="jt7-iX-bsh"/>
+                            <constraint firstItem="9fW-AY-4qh" firstAttribute="leading" secondItem="JOF-8k-1xg" secondAttribute="leading" constant="20" id="wOu-bU-q8p"/>
+                            <constraint firstItem="9fW-AY-4qh" firstAttribute="centerX" secondItem="chM-hM-NcB" secondAttribute="centerX" id="zki-e7-WPq"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="JOF-8k-1xg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Budgets" id="4cL-MD-zOZ"/>
+                    <connections>
+                        <outlet property="budgetNameLabel" destination="4jv-x4-zAN" id="Ugc-gU-rOL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wZb-rA-d4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="831.88405797101461" y="132.88043478260872"/>
         </scene>
     </scenes>
 </document>

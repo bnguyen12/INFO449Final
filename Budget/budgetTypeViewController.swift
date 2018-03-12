@@ -115,11 +115,11 @@ class budgetTypeViewController: UIViewController {
     }
     
     @IBAction func submitType(_ sender: UIButton) {
-        let budgetStartDateController = self.storyboard?.instantiateViewController(withIdentifier: "budgetStartDateViewController") as! budgetStartDateViewController
-        budgetStartDateController.budgets = self.budgets; 
-        budgetStartDateController.budgetName = self.budgetName;
-        budgetStartDateController.budgetType = self.budgetType;
-        self.present(budgetStartDateController, animated: true, completion: nil)
+        let budgetCurrencyController = self.storyboard?.instantiateViewController(withIdentifier: "budgetCurrencyViewController") as! budgetCurrencyViewController
+        budgetCurrencyController.budgets = self.budgets;
+        budgetCurrencyController.budgetName = self.budgetName;
+        budgetCurrencyController.budgetType = self.budgetType;
+        self.present(budgetCurrencyController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {

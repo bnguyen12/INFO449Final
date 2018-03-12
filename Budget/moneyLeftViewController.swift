@@ -13,9 +13,9 @@ class moneyLeftViewController: UIViewController {
     var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
-    var budgetStartDate: String = "";
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
+    var daysLeft:Int = 0;
     
     @IBOutlet weak var continueBtn: UIButton!
     
@@ -29,7 +29,6 @@ class moneyLeftViewController: UIViewController {
         addMoneyLeftController.budgets = self.budgets; 
         addMoneyLeftController.budgetName = self.budgetName;
         addMoneyLeftController.budgetType = self.budgetType;
-        addMoneyLeftController.budgetStartDate = self.budgetStartDate;
         addMoneyLeftController.budgetCurrencyType = self.budgetCurrencyType;
         addMoneyLeftController.budgetAmount = self.budgetAmount;
         addMoneyLeftController.moneyLeftAmount = self.moneyLeftAmount;
@@ -41,10 +40,19 @@ class moneyLeftViewController: UIViewController {
         
         print(budgetName);
         print(budgetType);
-        print(budgetStartDate);
         print(budgetCurrencyType);
         print(budgetAmount);
         print(moneyLeftAmount);
+        
+        if budgetType == "Weekly" {
+            daysLeft = 7;
+        } else if budgetType == "Monthly" {
+            daysLeft = 30;
+        } else if budgetType == "One-Off" {
+            daysLeft = 9999; //means unlimited
+        } else {
+            daysLeft = 14;
+        }
 
         // Do any additional setup after loading the view.
         if moneyLeftAmount == "" {
@@ -62,10 +70,10 @@ class moneyLeftViewController: UIViewController {
         budgetListController.budgets = self.budgets;
         budgetListController.budgetName = self.budgetName;
         budgetListController.budgetType = self.budgetType;
-        budgetListController.budgetStartDate = self.budgetStartDate;
         budgetListController.budgetCurrencyType = self.budgetCurrencyType;
         budgetListController.budgetAmount = self.budgetAmount;
         budgetListController.moneyLeftAmount = self.moneyLeftAmount;
+        budgetListController.daysLeft = self.daysLeft;
         self.present(budgetListController, animated: true, completion: nil)
     }
     

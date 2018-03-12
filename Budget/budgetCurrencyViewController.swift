@@ -13,7 +13,6 @@ class budgetCurrencyViewController: UIViewController, UIPickerViewDelegate, UIPi
     var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
-    var budgetStartDate: String = "";
     
     var budgetCurrencyType: String = "";
     
@@ -57,7 +56,6 @@ class budgetCurrencyViewController: UIViewController, UIPickerViewDelegate, UIPi
         budgetAmountController.budgets = self.budgets; 
         budgetAmountController.budgetName = self.budgetName;
         budgetAmountController.budgetType = self.budgetType;
-        budgetAmountController.budgetStartDate = self.budgetStartDate;
         budgetAmountController.budgetCurrencyType = self.budgetCurrencyType
         self.present(budgetAmountController, animated: true, completion: nil)
     }

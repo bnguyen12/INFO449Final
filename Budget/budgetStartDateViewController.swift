@@ -55,7 +55,6 @@ class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIP
         budgetCurrencyController.budgets = self.budgets; 
         budgetCurrencyController.budgetName = self.budgetName;
         budgetCurrencyController.budgetType = self.budgetType;
-        budgetCurrencyController.budgetStartDate = self.budgetStartDate;
         self.present(budgetCurrencyController, animated: true, completion: nil)
     }
 
@@ -65,7 +64,7 @@ class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIP
         // Connect data:
         self.datePicker.delegate = self
         self.datePicker.dataSource = self
-        datePickerData = ["", "Today", "First of Month", "Last of Month"];
+        datePickerData = ["", "Today", "First of Month", "15th", "Last of Month"];
 
         // Do any additional setup after loading the view.
     }

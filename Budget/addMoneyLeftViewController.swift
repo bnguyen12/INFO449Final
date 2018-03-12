@@ -13,7 +13,6 @@ class addMoneyLeftViewController: UIViewController {
     var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
-    var budgetStartDate: String = "";
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
     var moneyLeftAmount: String = "";
@@ -27,7 +26,6 @@ class addMoneyLeftViewController: UIViewController {
         moneyLeftController.budgets = self.budgets;
         moneyLeftController.budgetName = self.budgetName;
         moneyLeftController.budgetType = self.budgetType;
-        moneyLeftController.budgetStartDate = self.budgetStartDate;
         moneyLeftController.budgetCurrencyType = self.budgetCurrencyType;
         moneyLeftController.budgetAmount = self.budgetAmount;
         moneyLeftController.moneyLeftAmount = self.moneyLeftAmount;

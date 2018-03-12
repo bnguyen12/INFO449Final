@@ -16,6 +16,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
     var moneyLeftAmount: String = "";
+    var daysLeft:Int = 0;
     
     var budgets: [Budget] = [];
 
@@ -29,17 +30,18 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
         let budget = budgets[indexPath.row]
         
-        cell.textLabel?.text = budget.budgetName
-        cell.detailTextLabel?.text = budget.budgetType
+        cell.textLabel?.text = budget.budgetName;
+        cell.detailTextLabel?.text = "Money left: " + budget.moneyLeftAmount;
         
         return cell
     }
     
-    /*func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let questionViewController = self.storyboard?.instantiateViewController(withIdentifier: "QuestionViewController") as! QuestionViewController
-        questionViewController.category = self.quizCategories[indexPath.row]
-        self.present(questionViewController, animated: true, completion: nil)
-    }*/
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
+        budgetInfoViewController.budgets = self.budgets;
+        budgetInfoViewController.budget = self.budgets[indexPath.row]; 
+        self.present(budgetInfoViewController, animated: true, completion: nil)
+    }
     
     @IBAction func addBudget(_ sender: UIButton) {
         let makeBudgetViewController = self.storyboard?.instantiateViewController(withIdentifier: "makeBudgetViewController") as! makeBudgetViewController
@@ -54,9 +56,11 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         budgetCategories.delegate = self
         budgetCategories.tableFooterView = UIView() // makes the table the height of the view
         
-        let budget = Budget(budgetName: budgetName, budgetType: budgetType, budgetStartDate: budgetStartDate, budgetCurrencyType: budgetCurrencyType, budgetAmount: budgetAmount, moneyLeftAmount: moneyLeftAmount, expenses:[])
+        let budget = Budget(budgetName: budgetName, budgetType: budgetType, budgetCurrencyType: budgetCurrencyType, budgetAmount: budgetAmount, moneyLeftAmount: moneyLeftAmount, daysLeft: daysLeft, expenses:[]) 
         
-        budgets.append(budget)
+        if(budget.budgetName != "") {
+            budgets.append(budget)
+        }
 
         // Do any additional setup after loading the view.
     }

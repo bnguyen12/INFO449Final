@@ -13,7 +13,6 @@ class budgetAmountViewController: UIViewController {
     var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
-    var budgetStartDate: String = "";
     var budgetCurrencyType: String = "";
     
     //button ctrls
@@ -27,7 +26,6 @@ class budgetAmountViewController: UIViewController {
         addBudgetAmountController.budgets = self.budgets; 
         addBudgetAmountController.budgetName = self.budgetName;
         addBudgetAmountController.budgetType = self.budgetType;
-        addBudgetAmountController.budgetStartDate = self.budgetStartDate;
         addBudgetAmountController.budgetCurrencyType = self.budgetCurrencyType
         addBudgetAmountController.budgetAmount = self.budgetAmount;
         self.present(addBudgetAmountController, animated: true, completion: nil)
@@ -38,7 +36,6 @@ class budgetAmountViewController: UIViewController {
         
         print(budgetName);
         print(budgetType);
-        print(budgetStartDate);
         print(budgetCurrencyType);
         print(budgetAmount);
     
@@ -60,7 +57,6 @@ class budgetAmountViewController: UIViewController {
         moneyLeftController.budgets = self.budgets; 
         moneyLeftController.budgetName = self.budgetName;
         moneyLeftController.budgetType = self.budgetType;
-        moneyLeftController.budgetStartDate = self.budgetStartDate;
         moneyLeftController.budgetCurrencyType = self.budgetCurrencyType;
         moneyLeftController.budgetAmount = self.budgetAmount;
         self.present(moneyLeftController, animated: true, completion: nil)
