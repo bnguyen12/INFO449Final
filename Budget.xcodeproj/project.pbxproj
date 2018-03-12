@@ -105,7 +105,7 @@
 				3497719A2048FD21005BBF76 /* BudgetUITests.xctest */,
 			);
 			name = Products;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3497717D2048FD21005BBF76 /* Budget */ = {
 			isa = PBXGroup;
@@ -121,7 +121,7 @@
 				3497718A2048FD21005BBF76 /* Info.plist */,
 			);
 			path = Budget;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		349771922048FD21005BBF76 /* BudgetTests */ = {
 			isa = PBXGroup;
@@ -130,7 +130,7 @@
 				349771952048FD21005BBF76 /* Info.plist */,
 			);
 			path = BudgetTests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		3497719D2048FD21005BBF76 /* BudgetUITests */ = {
 			isa = PBXGroup;
@@ -139,7 +139,7 @@
 				349771A02048FD21005BBF76 /* Info.plist */,
 			);
 			path = BudgetUITests;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		5FA33A8835BD1F0F9A404EE9 /* Frameworks */ = {
 			isa = PBXGroup;
@@ -147,7 +147,7 @@
 				051695C030503919438F8A80 /* Pods_Budget.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 		94C71EFF83D0E0856CD55C7C /* Pods */ = {
 			isa = PBXGroup;
@@ -156,7 +156,7 @@
 				7C107972DF4869BE2E38D689 /* Pods-Budget.release.xcconfig */,
 			);
 			name = Pods;
-			sourceTree = "<group>";
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
