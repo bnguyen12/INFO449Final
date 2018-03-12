@@ -10,6 +10,7 @@ import UIKit
 
 class addMoneyLeftViewController: UIViewController {
     //passed variables
+    var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
     var budgetStartDate: String = "";
@@ -23,6 +24,7 @@ class addMoneyLeftViewController: UIViewController {
     
     @IBAction func submitMoneyLeft(_ sender: UIButton) {
         let moneyLeftController = self.storyboard?.instantiateViewController(withIdentifier: "moneyLeftViewController") as! moneyLeftViewController
+        moneyLeftController.budgets = self.budgets;
         moneyLeftController.budgetName = self.budgetName;
         moneyLeftController.budgetType = self.budgetType;
         moneyLeftController.budgetStartDate = self.budgetStartDate;

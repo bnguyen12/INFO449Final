@@ -9,6 +9,7 @@
 import UIKit
 
 class makeBudgetViewController: UIViewController, UITextFieldDelegate {
+    var budgets: [Budget] = [];
     
     @IBOutlet weak var budgetName: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
@@ -31,6 +32,7 @@ class makeBudgetViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitName(_ sender: UIButton) {
         let budgetTypeController = self.storyboard?.instantiateViewController(withIdentifier: "budgetTypeViewController") as! budgetTypeViewController
         budgetTypeController.budgetName = self.budgetName.text!
+        budgetTypeController.budgets = self.budgets 
         self.present(budgetTypeController, animated: true, completion: nil)
     }
     

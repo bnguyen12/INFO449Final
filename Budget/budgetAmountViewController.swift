@@ -10,6 +10,7 @@ import UIKit
 
 class budgetAmountViewController: UIViewController {
     // passed variables
+    var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
     var budgetStartDate: String = "";
@@ -23,6 +24,7 @@ class budgetAmountViewController: UIViewController {
     
     @IBAction func addBudgetAmount(_ sender: UIButton) {
         let addBudgetAmountController = self.storyboard?.instantiateViewController(withIdentifier: "addBudgetAmountViewController") as! addBudgetAmountViewController
+        addBudgetAmountController.budgets = self.budgets; 
         addBudgetAmountController.budgetName = self.budgetName;
         addBudgetAmountController.budgetType = self.budgetType;
         addBudgetAmountController.budgetStartDate = self.budgetStartDate;
@@ -55,6 +57,7 @@ class budgetAmountViewController: UIViewController {
 
     @IBAction func submitBudgetAmount(_ sender: UIButton) {
         let moneyLeftController = self.storyboard?.instantiateViewController(withIdentifier: "moneyLeftViewController") as! moneyLeftViewController
+        moneyLeftController.budgets = self.budgets; 
         moneyLeftController.budgetName = self.budgetName;
         moneyLeftController.budgetType = self.budgetType;
         moneyLeftController.budgetStartDate = self.budgetStartDate;

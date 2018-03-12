@@ -10,6 +10,7 @@ import UIKit
 
 class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     // passed variables
+    var budgets: [Budget] = [];
     var budgetName: String = "";
     var budgetType: String = "";
     
@@ -51,6 +52,7 @@ class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIP
     
     @IBAction func submitDate(_ sender: UIButton) {
         let budgetCurrencyController = self.storyboard?.instantiateViewController(withIdentifier: "budgetCurrencyViewController") as! budgetCurrencyViewController
+        budgetCurrencyController.budgets = self.budgets; 
         budgetCurrencyController.budgetName = self.budgetName;
         budgetCurrencyController.budgetType = self.budgetType;
         budgetCurrencyController.budgetStartDate = self.budgetStartDate;

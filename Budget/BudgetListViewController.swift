@@ -18,6 +18,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
     var moneyLeftAmount: String = "";
     
     var budgets: [Budget] = [];
+
     @IBOutlet weak var budgetCategories: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,10 +27,10 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
-        let budgetName = budgets[indexPath.row]
+        let budget = budgets[indexPath.row]
         
-        cell.textLabel?.text = budgetName.budgetTitle
-        cell.detailTextLabel?.text = budgetName.budgetType
+        cell.textLabel?.text = budget.budgetName
+        cell.detailTextLabel?.text = budget.budgetType
         
         return cell
     }
@@ -40,6 +41,12 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         self.present(questionViewController, animated: true, completion: nil)
     }*/
     
+    @IBAction func addBudget(_ sender: UIButton) {
+        let makeBudgetViewController = self.storyboard?.instantiateViewController(withIdentifier: "makeBudgetViewController") as! makeBudgetViewController
+        makeBudgetViewController.budgets = self.budgets
+        self.present(makeBudgetViewController, animated: true, completion: nil)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -47,11 +54,9 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         budgetCategories.delegate = self
         budgetCategories.tableFooterView = UIView() // makes the table the height of the view
         
-        let expense1 = Expense(expense: "$2.03", spentOn: "Food");
+        let budget = Budget(budgetName: budgetName, budgetType: budgetType, budgetStartDate: budgetStartDate, budgetCurrencyType: budgetCurrencyType, budgetAmount: budgetAmount, moneyLeftAmount: moneyLeftAmount, expenses:[])
         
-        let budget1 = Budget(budgetTitle: "Grocery", budgetType: "Weekly", expenses:[expense1])
-        
-        budgets = [budget1]
+        budgets.append(budget)
 
         // Do any additional setup after loading the view.
     }

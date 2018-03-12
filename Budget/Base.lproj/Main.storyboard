@@ -274,7 +274,7 @@
                                     <color key="titleColor" red="0.55482476949691772" green="0.76899653673171997" blue="0.5157129168510437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="e35-gH-FuI" kind="show" id="6bI-Iq-bqJ"/>
+                                    <action selector="addBudget:" destination="SCP-BL-yYW" eventType="touchUpInside" id="Pak-iX-iBx"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SfV-gZ-iTP">
@@ -355,7 +355,7 @@
         <!--Budgets-->
         <scene sceneID="pEC-9P-G6e">
             <objects>
-                <viewController id="e35-gH-FuI" customClass="makeBudgetViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="makeBudgetViewController" id="e35-gH-FuI" customClass="makeBudgetViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Uvy-6H-GYi">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

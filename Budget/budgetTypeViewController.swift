@@ -11,6 +11,7 @@ import UIKit
 class budgetTypeViewController: UIViewController {
     
     // passed variable
+    var budgets: [Budget] = [];
     var budgetName: String = "";
     
     var budgetType: String = "";
@@ -115,6 +116,7 @@ class budgetTypeViewController: UIViewController {
     
     @IBAction func submitType(_ sender: UIButton) {
         let budgetStartDateController = self.storyboard?.instantiateViewController(withIdentifier: "budgetStartDateViewController") as! budgetStartDateViewController
+        budgetStartDateController.budgets = self.budgets; 
         budgetStartDateController.budgetName = self.budgetName;
         budgetStartDateController.budgetType = self.budgetType;
         self.present(budgetStartDateController, animated: true, completion: nil)
