@@ -13,6 +13,8 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
     var budgets: [Budget] = [];
     var budget: Budget?;
     
+    var currencyVal = "";
+    
     @IBOutlet weak var budgetNameLabel: UILabel!
     @IBOutlet weak var expensesTable: UITableView!
     @IBOutlet weak var budgetTypeLabel: UILabel!
@@ -26,7 +28,15 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
         let cell = tableView.dequeueReusableCell(withIdentifier: "LabelCell", for: indexPath)
         let expense = budget?.expenses[indexPath.row]
         
-        cell.textLabel?.text = expense?.expense;
+        if(budget?.budgetCurrencyType)! == "yen" {
+            currencyVal = "¥";
+        } else if (budget?.budgetCurrencyType)! == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
+        cell.textLabel?.text = currencyVal + (expense?.expense)!;
         cell.detailTextLabel?.text = "Spent on: " + (expense?.spentOn)!;
     
         return cell
@@ -49,18 +59,35 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        if(budget?.budgetCurrencyType)! == "yen" {
+            currencyVal = "¥";
+        } else if (budget?.budgetCurrencyType)! == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
         expensesTable.dataSource = self
         expensesTable.delegate = self
         expensesTable.tableFooterView = UIView() // makes the table the height of the view
         
         budgetNameLabel.text = budget?.budgetName;
         budgetTypeLabel.text = budget?.budgetType;
-        if let amountLeft = budget?.moneyLeftAmount, let newAmountLeft = Double(amountLeft) {
-            if let budgetAmount = budget?.budgetAmount, let newBudgetAmount = Double(budgetAmount) {
-                budgetSpentLabel.text = String(newBudgetAmount - newAmountLeft);
+        
+        if(!(budget?.expenses.isEmpty)!) {
+            if(budget?.expenses[0].spentOn != "already spent") {
+                if let amountLeft = budget?.moneyLeftAmount, let newAmountLeft = Double(amountLeft) {
+                    if let budgetAmount = budget?.budgetAmount, let newBudgetAmount = Double(budgetAmount) {
+                        budgetSpentLabel.text = currencyVal + String(newBudgetAmount - newAmountLeft) + " spent";
+                        
+                        budget?.expenses.append(Expense(expense: String(newBudgetAmount - newAmountLeft), spentOn: "already spent"));
+                    }
+                }
             }
         }
+        
+    
         
         // Do any additional setup after loading the view.
     }

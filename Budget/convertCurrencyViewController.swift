@@ -23,13 +23,9 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupMenu()
         currency = (budget?.budgetCurrencyType)!;
-        
-        
-        //var expenses = ["Groceries": [30.33, 100.00], //string is category, first value of array is spent amount, second value is budget amount
-            //"Automotive": [120.00, 2000.00],
-            //"Housing": [750.25, 10000.00]]
     }
     
     // Setup circular menu
@@ -75,27 +71,35 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
             as! convertCurrencyCustomCell
-        budget = budgets[indexPath.row]
-        cell.label.text! = (budget?.budgetName)!;
-        var currencySymbol = "$"
-        if currency == "cad" {
-            currencySymbol = "C$"
-        } else if currency == "yen" {
-            currencySymbol = "￥"
+    
+        if(budget == budgets[indexPath.row] ) {
+            budget = budgets[indexPath.row]
+            
+            
+            cell.label.text! = (budget?.budgetName)!;
+            var currencySymbol = "$"
+            if currency == "cad" {
+                currencySymbol = "C$"
+            } else if currency == "yen" {
+                currencySymbol = "￥"
+            }
+            
+            if let amount = budget?.moneyLeftAmount, let newAmount = Double(amount) {
+                cell.amount.text! = currencySymbol + String(format:"%.02f", newAmount) //always add two numbers after decimal
+            }
+            //return cell;
+        } else {
+            cell.label.text! = "";
+            cell.amount.text! = "";
         }
-        
-        if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
-            cell.amount.text! = currencySymbol + String(format:"%.02f", newAmount) //always add two numbers after decimal
-        }
-        
-       
-        return cell
+        return cell;
     }
     
     @IBAction func backBtn(_ sender: UIButton) {
-        let budgetListController = self.storyboard?.instantiateViewController(withIdentifier: "budgetListController") as! BudgetListViewController
-        budgetListController.budgets = self.budgets;
-        self.present(budgetListController, animated: true, completion: nil)
+        let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
+        budgetInfoViewController.budgets = self.budgets;
+        budgetInfoViewController.budget = self.budget;
+        self.present(budgetInfoViewController, animated: true, completion: nil)
     }
     
     
@@ -104,68 +108,46 @@ class convertCurrencyViewController: UIViewController, CircleMenuDelegate, UITab
         switch currency {
         case "usd":
             if switchedCurrency == "cad" {
-                //for key in budget?.expenses.keys {
-                
+                //for budget in budgets {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
                     newAmount = newAmount * 1.28
                     budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "C$"
+                    budget?.budgetCurrencyType = "C$";
                 }
-                
-               // }
+               //}
             } else if switchedCurrency == "yen" {
-               // for key in expenses.keys {
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
                     newAmount = newAmount * 106.80
                     budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "￥"
+                    budget?.budgetCurrencyType = "￥";
                 }
-                   // expenses[key]![0] = expenses[key]![0] * 106.80
-                //}
             }
         case "cad":
             if switchedCurrency == "usd" {
-                //for key in expenses.keys {
-                   // expenses[key]![0] = expenses[key]![0] * 0.78
-                //}
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
                     newAmount = newAmount * 0.78
                     budget?.moneyLeftAmount = String(newAmount);
-                     budget?.budgetCurrencyType = "$"
+                    budget?.budgetCurrencyType = "$";
                 }
-                
             } else if switchedCurrency == "yen" {
-                //for key in expenses.keys {
-                   // expenses[key]![0] = expenses[key]![0] * 83.38
-               // }
-                
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
                     newAmount = newAmount * 83.38
                     budget?.moneyLeftAmount = String(newAmount);
-                     budget?.budgetCurrencyType = "￥"
+                    budget?.budgetCurrencyType = "￥";
                 }
             }
         default:
             if switchedCurrency == "usd" {
-                //for key in expenses.keys {
-                   // expenses[key]![0] = expenses[key]![0] * 0.0094
-                //}
-                
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
                     newAmount = newAmount * 0.0094
                     budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "$"
+                    budget?.budgetCurrencyType = "$";
                 }
-                
             } else if switchedCurrency == "cad" {
-               // for key in expenses.keys {
-                   // expenses[key]![0] = expenses[key]![0] * 0.012
-               // }
-                
                 if let amount = budget?.moneyLeftAmount, var newAmount = Double(amount) {
                     newAmount = newAmount * 0.012
                     budget?.moneyLeftAmount = String(newAmount);
-                    budget?.budgetCurrencyType = "C$"
+                    budget?.budgetCurrencyType = "C$";
                 }
             }
         }

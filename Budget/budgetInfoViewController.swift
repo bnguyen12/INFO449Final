@@ -44,6 +44,10 @@ class budgetInfoViewController: UIViewController {
     
     
     @IBAction func sendSMS(_ sender: UIButton) {
+        let messageController = self.storyboard?.instantiateViewController(withIdentifier: "messageController") as! messageViewController
+        messageController.budgets = self.budgets;
+        messageController.budget = self.budget;
+        self.present(messageController, animated: true, completion: nil)
     }
     
     

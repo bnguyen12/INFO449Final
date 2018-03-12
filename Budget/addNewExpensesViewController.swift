@@ -11,15 +11,12 @@ import DropDown
 
 class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var inputAmount: UITextField!
+    @IBOutlet weak var inputAmount: UILabel!
     @IBOutlet var expenseInput: [UIButton]!
     @IBOutlet weak var categoryText: UILabel!
     @IBOutlet weak var budgetLeftLabel: UILabel!
     @IBOutlet weak var expenseName: UITextField!
     @IBOutlet weak var timeLeft: UILabel!
-    
-    @IBAction func expenseInput(_ sender: Any) {
-    }
     
     var nums = ["0", ".", "0", "0"]
     
@@ -45,10 +42,18 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
         dropdown.backgroundColor = UIColor(red:0.72, green:0.86, blue:0.69, alpha:1.0)
         dropdown.cornerRadius = 15
         dropdown.anchorView = view
-        //dropdown.dataSource = Array(expenses.keys)
+        var budgetNames:[String] = [];
+        for budget in budgets {
+            budgetNames.append(budget.budgetName)
+        }
+        dropdown.dataSource = budgetNames;
         dropdown.bottomOffset = CGPoint(x: 0, y: dropdown.plainView.bounds.height + 120)
         budgetLeftLabel.text! = "Budget left: \(currency)\(budget?.moneyLeftAmount ?? "$0.00")"
-        timeLeft.text! = "Time left: \(budget?.daysLeft ?? 0)"
+        if(budget?.daysLeft == 9999) {
+            timeLeft.text! = "Time left: unlimited"
+        } else {
+            timeLeft.text! = "Time left: \(budget?.daysLeft ?? 0)"
+        }
         
         self.expenseName.delegate = self;
     }
@@ -57,8 +62,23 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
     @IBAction func clickCategory(_ sender: Any) {
         dropdown.show()
         dropdown.selectionAction = { [unowned self] (index: Int, item: String) in
+            for budget in self.budgets {
+                if item == budget.budgetName {
+                    self.budget = budget;
+                }
+            }
+            
+            let expensesViewController = self.storyboard?.instantiateViewController(withIdentifier: "addNewExpensesController") as! addNewExpensesViewController
+            expensesViewController.budgets = self.budgets;
+            expensesViewController.budget = self.budget;
+            
+            self.categoryText.text = self.budget?.budgetName;
+            self.budgetLeftLabel.text! = "Budget left: \(self.currency)\(self.budget?.moneyLeftAmount ?? "$0.00")"
+            self.timeLeft.text! = "Time left: \(self.budget?.daysLeft ?? 0)"
+            self.present(expensesViewController, animated: true, completion: nil)
+            
             //self.category = item
-            //self.categoryText.text = item
+            self.categoryText.text = self.budget?.budgetName;
             //self.budgetLeftLabel.text! = "Budget left:"
             //self.budgetLeftLabel.text! += "\(self.currency)\(self.expenses[self.category]![1] - self.expenses[self.category]![0])"
         }
@@ -107,7 +127,11 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
             
            // expenses[category]![0] = expenses[category]![0] + Double(inputAmount.text!)!
             budgetLeftLabel.text! = "Budget left: \(currency)\(budget?.moneyLeftAmount ?? "$0.00")"
-            timeLeft.text! = "Time left: \(budget?.daysLeft ?? 0)"
+            if(budget?.daysLeft == 9999) {
+                timeLeft.text! = "Time left: unlimited"
+            } else {
+                timeLeft.text! = "Time left: \(budget?.daysLeft ?? 0)"
+            }
         }
         inputAmount.text! = currency + nums.joined()
     }
@@ -117,6 +141,10 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
         budgetInfoViewController.budgets = self.budgets;
         budgetInfoViewController.budget = self.budget;
         self.present(budgetInfoViewController, animated: true, completion: nil)
+    }
+    
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        expenseName.text = ""
     }
     
     func textFieldShouldReturn(_ expenseName: UITextField) -> Bool {

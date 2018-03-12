@@ -25,5 +25,6 @@ class Budget: NSObject {
         self.moneyLeftAmount = moneyLeftAmount
         self.daysLeft = daysLeft;
         self.expenses = expenses
+
     }
 }
