@@ -14,7 +14,6 @@ class makeBudgetViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var continueBtn: UIButton!
     
     @IBAction func inputBudgetName(_ sender: UITextField) {
-        NSLog(budgetName.text!);
         if(budgetName.text != "") {
             continueBtn.isEnabled = true
             continueBtn.alpha = 1
@@ -32,7 +31,6 @@ class makeBudgetViewController: UIViewController, UITextFieldDelegate {
     @IBAction func submitName(_ sender: UIButton) {
         let budgetTypeController = self.storyboard?.instantiateViewController(withIdentifier: "budgetTypeViewController") as! budgetTypeViewController
         budgetTypeController.budgetName = self.budgetName.text!
-        print("???")
         self.present(budgetTypeController, animated: true, completion: nil)
     }
     

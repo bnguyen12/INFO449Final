@@ -601,7 +601,7 @@
                                     <color key="titleColor" red="0.55482476950000004" green="0.76899653670000001" blue="0.51571291689999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="vgj-yN-dkr" kind="show" id="iNl-aA-OYg"/>
+                                    <action selector="submitDate:" destination="Frb-oF-rcg" eventType="touchUpInside" id="b98-NB-TrK"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Budget Setup" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ksq-wV-9qR">
@@ -648,6 +648,9 @@
                         <viewLayoutGuide key="safeArea" id="RZy-Jz-NLk"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Budgets" id="q3N-OW-2gS"/>
+                    <connections>
+                        <outlet property="datePicker" destination="9Tq-ud-Cd9" id="qyF-QN-Yd9"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KxL-rv-1g5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -656,7 +659,7 @@
         <!--Budgets-->
         <scene sceneID="r3P-dE-OfZ">
             <objects>
-                <viewController id="vgj-yN-dkr" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="budgetCurrencyViewController" id="vgj-yN-dkr" customClass="budgetCurrencyViewController" customModule="Budget" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="tj1-Qg-yvn">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1872,7 +1875,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="sfJ-UL-sDG"/>
-        <segue reference="FgN-O9-EMA"/>
+        <segue reference="N5M-A4-fai"/>
+        <segue reference="srT-Ru-bgQ"/>
     </inferredMetricsTieBreakers>
 </document>

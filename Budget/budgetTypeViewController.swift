@@ -122,9 +122,6 @@ class budgetTypeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        NSLog("yesssss good controller")
-        NSLog(budgetName);
 
         // Do any additional setup after loading the view.
     }
