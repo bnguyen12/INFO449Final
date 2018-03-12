@@ -16,6 +16,8 @@ class budgetCurrencyViewController: UIViewController, UIPickerViewDelegate, UIPi
     
     var budgetCurrencyType: String = "";
     
+
+    @IBOutlet weak var continueBtn: UIButton!
     @IBOutlet weak var currencyPicker: UIPickerView!
     var currencyPickerData: [String] = [];
     
@@ -40,6 +42,13 @@ class budgetCurrencyViewController: UIViewController, UIPickerViewDelegate, UIPi
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         budgetCurrencyType = currencyPickerData[row];
+        if(budgetCurrencyType == "") {
+            continueBtn.isEnabled = false;
+            continueBtn.alpha = 0.4;
+        } else {
+            continueBtn.isEnabled = true;
+            continueBtn.alpha = 1.0;
+        }
     }
     
     @IBAction func submitCurrency(_ sender: UIButton) {

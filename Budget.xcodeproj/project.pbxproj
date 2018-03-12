@@ -23,6 +23,8 @@
 		42DF940E2050C02600D6C18E /* Budget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940D2050C02600D6C18E /* Budget.swift */; };
 		42DF94102050C0A000D6C18E /* Expense.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DF940F2050C0A000D6C18E /* Expense.swift */; };
 		42DFEF5320562F4800AB52DD /* addBudgetAmountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DFEF5220562F4800AB52DD /* addBudgetAmountViewController.swift */; };
+		42DFEF552056425900AB52DD /* moneyLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DFEF542056425900AB52DD /* moneyLeftViewController.swift */; };
+		42DFEF572056426400AB52DD /* addMoneyLeftViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DFEF562056426400AB52DD /* addMoneyLeftViewController.swift */; };
 		42E51DA92055DA83004987C0 /* makeBudgetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42E51DA82055DA83004987C0 /* makeBudgetViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +68,8 @@
 		42DF940D2050C02600D6C18E /* Budget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Budget.swift; sourceTree = "<group>"; };
 		42DF940F2050C0A000D6C18E /* Expense.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Expense.swift; sourceTree = "<group>"; };
 		42DFEF5220562F4800AB52DD /* addBudgetAmountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addBudgetAmountViewController.swift; sourceTree = "<group>"; };
+		42DFEF542056425900AB52DD /* moneyLeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = moneyLeftViewController.swift; sourceTree = "<group>"; };
+		42DFEF562056426400AB52DD /* addMoneyLeftViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = addMoneyLeftViewController.swift; sourceTree = "<group>"; };
 		42E51DA82055DA83004987C0 /* makeBudgetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeBudgetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -120,6 +124,8 @@
 				3497717E2048FD21005BBF76 /* AppDelegate.swift */,
 				349771802048FD21005BBF76 /* titleViewController.swift */,
 				349771822048FD21005BBF76 /* Main.storyboard */,
+				42DFEF542056425900AB52DD /* moneyLeftViewController.swift */,
+				42DFEF562056426400AB52DD /* addMoneyLeftViewController.swift */,
 				42DFEF5220562F4800AB52DD /* addBudgetAmountViewController.swift */,
 				42B7039A205605C9009CA31D /* budgetAmountViewController.swift */,
 				425D8A342055FDAA0061D02A /* budgetStartDateViewController.swift */,
@@ -289,6 +295,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DFEF552056425900AB52DD /* moneyLeftViewController.swift in Sources */,
 				42B703992056033D009CA31D /* budgetCurrencyViewController.swift in Sources */,
 				42DFEF5320562F4800AB52DD /* addBudgetAmountViewController.swift in Sources */,
 				42DF94102050C0A000D6C18E /* Expense.swift in Sources */,
@@ -300,6 +307,7 @@
 				42B7039B205605C9009CA31D /* budgetAmountViewController.swift in Sources */,
 				425D8A332055F14B0061D02A /* budgetTypeViewController.swift in Sources */,
 				3497717F2048FD21005BBF76 /* AppDelegate.swift in Sources */,
+				42DFEF572056426400AB52DD /* addMoneyLeftViewController.swift in Sources */,
 				42DF940C2050BE0300D6C18E /* BudgetListViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

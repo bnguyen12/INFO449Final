@@ -16,6 +16,7 @@ class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIP
     var budgetStartDate: String = "";
     
     @IBOutlet weak var datePicker: UIPickerView!
+    @IBOutlet weak var continueBtn: UIButton!
     var datePickerData: [String] = [];
     
     // code referenced from: https://codewithchris.com/uipickerview-example/
@@ -39,6 +40,13 @@ class budgetStartDateViewController: UIViewController, UIPickerViewDelegate, UIP
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
         budgetStartDate = datePickerData[row];
+        if(budgetStartDate == "") {
+            continueBtn.isEnabled = false;
+            continueBtn.alpha = 0.4;
+        } else {
+            continueBtn.isEnabled = true;
+            continueBtn.alpha = 1.0;
+        }
     }
     
     @IBAction func submitDate(_ sender: UIButton) {

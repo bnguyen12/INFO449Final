@@ -53,6 +53,16 @@ class budgetAmountViewController: UIViewController {
         }
     }
 
+    @IBAction func submitBudgetAmount(_ sender: UIButton) {
+        let moneyLeftController = self.storyboard?.instantiateViewController(withIdentifier: "moneyLeftViewController") as! moneyLeftViewController
+        moneyLeftController.budgetName = self.budgetName;
+        moneyLeftController.budgetType = self.budgetType;
+        moneyLeftController.budgetStartDate = self.budgetStartDate;
+        moneyLeftController.budgetCurrencyType = self.budgetCurrencyType;
+        moneyLeftController.budgetAmount = self.budgetAmount;
+        self.present(moneyLeftController, animated: true, completion: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

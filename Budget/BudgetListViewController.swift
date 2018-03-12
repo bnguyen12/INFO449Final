@@ -9,7 +9,15 @@
 import UIKit
 
 class BudgetListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-    var budgets: [Budget] = []
+    // passed variables
+    var budgetName: String = "";
+    var budgetType: String = "";
+    var budgetStartDate: String = "";
+    var budgetCurrencyType: String = "";
+    var budgetAmount: String = "";
+    var moneyLeftAmount: String = "";
+    
+    var budgets: [Budget] = [];
     @IBOutlet weak var budgetCategories: UITableView!
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

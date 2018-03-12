@@ -1,5 +1,5 @@
 //
-//  addBudgetAmountViewController.swift
+//  addMoneyLeftViewController.swift
 //  Budget
 //
 //  Created by Lisa Koss on 3/11/18.
@@ -8,35 +8,38 @@
 
 import UIKit
 
-class addBudgetAmountViewController: UIViewController {
+class addMoneyLeftViewController: UIViewController {
     //passed variables
     var budgetName: String = "";
     var budgetType: String = "";
     var budgetStartDate: String = "";
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
-    
-    @IBOutlet weak var onScreenBudget: UILabel!
+    var moneyLeftAmount: String = "";
+
+    @IBOutlet weak var onScreenMoneyLeft: UILabel!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var backspace: UIButton!
     
-    @IBAction func submitAmount(_ sender: UIButton) {
-        let budgetAmountController = self.storyboard?.instantiateViewController(withIdentifier: "budgetAmountViewController") as! budgetAmountViewController
-        budgetAmountController.budgetName = self.budgetName;
-        budgetAmountController.budgetType = self.budgetType;
-        budgetAmountController.budgetStartDate = self.budgetStartDate;
-        budgetAmountController.budgetCurrencyType = self.budgetCurrencyType
-        budgetAmountController.budgetAmount = self.budgetAmount;
-        self.present(budgetAmountController, animated: true, completion: nil)
+    @IBAction func submitMoneyLeft(_ sender: UIButton) {
+        let moneyLeftController = self.storyboard?.instantiateViewController(withIdentifier: "moneyLeftViewController") as! moneyLeftViewController
+        moneyLeftController.budgetName = self.budgetName;
+        moneyLeftController.budgetType = self.budgetType;
+        moneyLeftController.budgetStartDate = self.budgetStartDate;
+        moneyLeftController.budgetCurrencyType = self.budgetCurrencyType;
+        moneyLeftController.budgetAmount = self.budgetAmount;
+        moneyLeftController.moneyLeftAmount = self.moneyLeftAmount;
+        self.present(moneyLeftController, animated: true, completion: nil)
     }
+    
     
     @IBAction func calculatorPad(_ sender: UIButton) {
         if sender.titleLabel?.text == "⇠" && backspace.isEnabled == true {
-            budgetAmount.removeLast();
-            onScreenBudget.text = budgetAmount;
+            moneyLeftAmount.removeLast();
+            onScreenMoneyLeft.text = moneyLeftAmount;
         } else {
-            budgetAmount += (sender.titleLabel?.text!)!;
-            onScreenBudget.text = budgetAmount;
+            moneyLeftAmount += (sender.titleLabel?.text!)!;
+            onScreenMoneyLeft.text = moneyLeftAmount;
         }
         
         if budgetAmount == "" {
@@ -44,7 +47,7 @@ class addBudgetAmountViewController: UIViewController {
             backspace.alpha = 0.4;
             submitBtn.isEnabled = false;
             submitBtn.alpha = 0.4;
-            onScreenBudget.text = "0.00";
+            onScreenMoneyLeft.text = "0.00";
         } else {
             backspace.isEnabled = true;
             backspace.alpha = 1.0;
@@ -55,8 +58,8 @@ class addBudgetAmountViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        if budgetAmount == "" {
+
+        if moneyLeftAmount == "" {
             submitBtn.isEnabled = false;
             submitBtn.alpha = 0.4;
             backspace.isEnabled = false;
@@ -66,9 +69,9 @@ class addBudgetAmountViewController: UIViewController {
             submitBtn.alpha = 1.0;
             backspace.isEnabled = true;
             backspace.alpha = 1.0;
-            onScreenBudget.text = budgetAmount;
+            onScreenMoneyLeft.text = moneyLeftAmount;
         }
-
+        
         // Do any additional setup after loading the view.
     }
 
