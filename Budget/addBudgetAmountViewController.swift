@@ -15,10 +15,12 @@ class addBudgetAmountViewController: UIViewController {
     var budgetType: String = "";
     var budgetCurrencyType: String = "";
     var budgetAmount: String = "";
+    var currencyVal:String = "";
     
     @IBOutlet weak var onScreenBudget: UILabel!
     @IBOutlet weak var submitBtn: UIButton!
     @IBOutlet weak var backspace: UIButton!
+    @IBOutlet weak var decimal: UIButton!
     
     @IBAction func submitAmount(_ sender: UIButton) {
         let budgetAmountController = self.storyboard?.instantiateViewController(withIdentifier: "budgetAmountViewController") as! budgetAmountViewController
@@ -33,10 +35,33 @@ class addBudgetAmountViewController: UIViewController {
     @IBAction func calculatorPad(_ sender: UIButton) {
         if sender.titleLabel?.text == "⇠" && backspace.isEnabled == true {
             budgetAmount.removeLast();
-            onScreenBudget.text = budgetAmount;
+            onScreenBudget.text = currencyVal + budgetAmount;
         } else {
-            budgetAmount += (sender.titleLabel?.text!)!;
-            onScreenBudget.text = budgetAmount;
+            if sender.titleLabel?.text == "." {
+                if budgetAmount.range(of: ".") != nil {
+                    decimal.isEnabled = false;
+                    decimal.alpha = 0.4;
+                    //disable the dot button
+                    //alpha it
+                } else {
+                    decimal.isEnabled = false;
+                    decimal.alpha = 0.4;
+                    budgetAmount += (sender.titleLabel?.text!)!;
+                    onScreenBudget.text = currencyVal + budgetAmount;
+                }
+            } else {
+                if budgetAmount.range(of: ".") == nil {
+                    decimal.isEnabled = true;
+                    decimal.alpha = 1.0;
+                }
+                budgetAmount += (sender.titleLabel?.text!)!;
+                onScreenBudget.text = currencyVal + budgetAmount;
+            }
+        }
+        
+        if budgetAmount.range(of: ".") == nil {
+            decimal.isEnabled = true;
+            decimal.alpha = 1.0;
         }
         
         if budgetAmount == "" {
@@ -44,29 +69,39 @@ class addBudgetAmountViewController: UIViewController {
             backspace.alpha = 0.4;
             submitBtn.isEnabled = false;
             submitBtn.alpha = 0.4;
-            onScreenBudget.text = "0.00";
+            onScreenBudget.text = currencyVal + "0.00";
         } else {
             backspace.isEnabled = true;
             backspace.alpha = 1.0;
             submitBtn.isEnabled = true;
             submitBtn.alpha = 1.0;
+            onScreenBudget.text = currencyVal + budgetAmount;
         }
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(budgetCurrencyType) == "yen" {
+            currencyVal = "¥";
+        } else if (budgetCurrencyType) == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
         if budgetAmount == "" {
             submitBtn.isEnabled = false;
             submitBtn.alpha = 0.4;
             backspace.isEnabled = false;
             backspace.alpha = 0.4;
+            onScreenBudget.text = currencyVal + "0.00";
         } else {
             submitBtn.isEnabled = true;
             submitBtn.alpha = 1.0;
             backspace.isEnabled = true;
             backspace.alpha = 1.0;
-            onScreenBudget.text = budgetAmount;
+            onScreenBudget.text = currencyVal + budgetAmount;
         }
 
         // Do any additional setup after loading the view.

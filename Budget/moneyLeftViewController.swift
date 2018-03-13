@@ -17,6 +17,7 @@ class moneyLeftViewController: UIViewController {
     var budgetAmount: String = "";
     var daysLeft:Int = 0;
     var expenses:[Expense] = [];
+    var currencyVal: String = "";
     
     @IBOutlet weak var continueBtn: UIButton!
     
@@ -37,6 +38,14 @@ class moneyLeftViewController: UIViewController {
     }
     
     override func viewDidLoad() {
+        if(budgetCurrencyType) == "yen" {
+            currencyVal = "¥";
+        } else if (budgetCurrencyType) == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
         super.viewDidLoad()
         
         print(budgetName);
@@ -59,11 +68,11 @@ class moneyLeftViewController: UIViewController {
         if moneyLeftAmount == "" {
             continueBtn.isEnabled = false;
             continueBtn.alpha = 0.4;
-            moneyLeftOnScreen.titleLabel?.text = "0.00";
+            moneyLeftOnScreen.setTitle(currencyVal + "0.00", for: .normal);
         } else {
             continueBtn.isEnabled = true;
             continueBtn.alpha = 1.0;
-            moneyLeftOnScreen.setTitle(moneyLeftAmount, for: .normal);
+            moneyLeftOnScreen.setTitle(currencyVal + moneyLeftAmount, for: .normal);
         }
     
     }

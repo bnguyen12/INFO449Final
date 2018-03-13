@@ -19,6 +19,7 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var timeLeft: UILabel!
     
     var nums = ["0", ".", "0", "0"]
+    var currencyVal:String = "";
     
     //passed variables
     var budgets: [Budget] = [];
@@ -28,14 +29,24 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
        // "Leisure": [120.38, 200.00],
        // "Automotive": [250.00, 1000.50]]
     //var category = "Groceries" //temp data
-    var currency = "$" //temp data
+    //var currency = "$" //temp data
     let dropdown = DropDown()
     //var expenses = [String: [Double]]
     //var currency = String()
     //var category = String()
+    @IBOutlet weak var ok: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if(budget?.budgetCurrencyType) == "yen" {
+            currencyVal = "¥";
+        } else if (budget?.budgetCurrencyType) == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
         categoryText.text = budget?.budgetName;
         dropdown.textFont = UIFont.systemFont(ofSize: 24)
         dropdown.textColor = UIColor.white
@@ -48,14 +59,18 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
         }
         dropdown.dataSource = budgetNames;
         dropdown.bottomOffset = CGPoint(x: 0, y: dropdown.plainView.bounds.height + 120)
-        budgetLeftLabel.text! = "Budget left: \(currency)\(budget?.moneyLeftAmount ?? "$0.00")"
+        budgetLeftLabel.text! = "Budget left: \(currencyVal)\(budget?.moneyLeftAmount ?? "0.00")"
         if(budget?.daysLeft == 9999) {
             timeLeft.text! = "Time left: unlimited"
         } else {
             timeLeft.text! = "Time left: \(budget?.daysLeft ?? 0)"
         }
         
+        inputAmount.text! = "";
+        inputAmount.text! = currencyVal + "0.00";
+        
         self.expenseName.delegate = self;
+        
     }
     
     // Open drop down menu and store the selected item into the category variable
@@ -73,7 +88,7 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
             expensesViewController.budget = self.budget;
             
             self.categoryText.text = self.budget?.budgetName;
-            self.budgetLeftLabel.text! = "Budget left: \(self.currency)\(self.budget?.moneyLeftAmount ?? "$0.00")"
+            self.budgetLeftLabel.text! = "Budget left: \(self.currencyVal)\(self.budget?.moneyLeftAmount ?? "0.00")"
             self.timeLeft.text! = "Time left: \(self.budget?.daysLeft ?? 0)"
             self.present(expensesViewController, animated: true, completion: nil)
             
@@ -86,8 +101,9 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
     
     // Take in input for number or action whenever a button is pressed
     @IBAction func clickButton(_ sender: UIButton) {
+        
         if sender.tag <= 9 {
-            if inputAmount.text!.starts(with: currency + "0") {
+            if inputAmount.text!.starts(with: currencyVal + "0") {
                 nums[0] = nums[2]
                 nums[2] = nums[3]
                 let temp = nums.removeLast()
@@ -126,14 +142,24 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
             
             
            // expenses[category]![0] = expenses[category]![0] + Double(inputAmount.text!)!
-            budgetLeftLabel.text! = "Budget left: \(currency)\(budget?.moneyLeftAmount ?? "$0.00")"
+            budgetLeftLabel.text! = "Budget left: \(currencyVal)\(budget?.moneyLeftAmount ?? "0.00")"
             if(budget?.daysLeft == 9999) {
                 timeLeft.text! = "Time left: unlimited"
             } else {
                 timeLeft.text! = "Time left: \(budget?.daysLeft ?? 0)"
             }
         }
-        inputAmount.text! = currency + nums.joined()
+        inputAmount.text! = currencyVal + nums.joined()
+        
+        if (inputAmount.text != "0.00") {
+            //enable as soon as any changes are made
+            ok.isEnabled = true;
+            ok.alpha = 1.0;
+        } else {
+            //enable as soon as any changes are made
+            ok.isEnabled = false;
+            ok.alpha = 0.4;
+        }
     }
     
     @IBAction func back(_ sender: UIButton) {

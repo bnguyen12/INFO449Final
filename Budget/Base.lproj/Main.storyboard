@@ -1045,6 +1045,7 @@
                     <tabBarItem key="tabBarItem" title="Budgets" id="oPD-oT-I9q"/>
                     <connections>
                         <outlet property="backspace" destination="BfG-uZ-f5t" id="VVq-ju-0va"/>
+                        <outlet property="decimal" destination="Q6t-km-zeG" id="jZy-c6-gKY"/>
                         <outlet property="onScreenBudget" destination="Poo-OW-oJf" id="SXt-LP-7Ic"/>
                         <outlet property="submitBtn" destination="JzR-Li-pLS" id="qof-QH-TFm"/>
                     </connections>
@@ -1560,6 +1561,7 @@
                     <tabBarItem key="tabBarItem" title="Budgets" id="Bsd-e1-7dg"/>
                     <connections>
                         <outlet property="backspace" destination="Dxz-9V-Ui7" id="HTa-ho-XhY"/>
+                        <outlet property="decimal" destination="Isd-7r-sBV" id="BgB-94-Sj6"/>
                         <outlet property="onScreenMoneyLeft" destination="dCR-wf-09n" id="cVQ-Kg-ZXW"/>
                         <outlet property="submitBtn" destination="2Sg-2r-QFd" id="6pz-SM-I23"/>
                     </connections>
@@ -2101,7 +2103,7 @@
                                                     <action selector="clickButton:" destination="PGF-dO-lrY" eventType="touchUpInside" id="yKH-xg-ev6"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-ou-a4M">
+                                            <button opaque="NO" alpha="0.40000000000000002" tag="11" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lVv-ou-a4M">
                                                 <rect key="frame" x="233.5" y="7" width="86.5" height="36.5"/>
                                                 <state key="normal">
                                                     <attributedString key="attributedTitle">
@@ -2164,6 +2166,7 @@
                         <outlet property="categoryText" destination="ELQ-4m-Ju0" id="MGK-9Q-QCe"/>
                         <outlet property="expenseName" destination="4Ql-ld-X4I" id="Z63-HX-RmG"/>
                         <outlet property="inputAmount" destination="gVh-Na-y11" id="WJY-U8-70c"/>
+                        <outlet property="ok" destination="lVv-ou-a4M" id="SUg-OY-izY"/>
                         <outlet property="timeLeft" destination="q7F-D8-fHi" id="eOW-M6-e06"/>
                         <outletCollection property="expenseInput" destination="NBR-rZ-mZI" collectionClass="NSMutableArray" id="b9n-lk-skn"/>
                         <outletCollection property="expenseInput" destination="vp4-Bm-oem" collectionClass="NSMutableArray" id="vup-2k-hyE"/>

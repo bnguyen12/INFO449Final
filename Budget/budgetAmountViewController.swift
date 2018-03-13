@@ -14,6 +14,7 @@ class budgetAmountViewController: UIViewController {
     var budgetName: String = "";
     var budgetType: String = "";
     var budgetCurrencyType: String = "";
+    var currencyVal: String = "";
     
     //button ctrls
     @IBOutlet weak var continueBtn: UIButton!
@@ -34,6 +35,14 @@ class budgetAmountViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if(budgetCurrencyType) == "yen" {
+            currencyVal = "¥";
+        } else if (budgetCurrencyType) == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
         print(budgetName);
         print(budgetType);
         print(budgetCurrencyType);
@@ -44,11 +53,11 @@ class budgetAmountViewController: UIViewController {
         if budgetAmount == "" {
             continueBtn.isEnabled = false;
             continueBtn.alpha = 0.4;
-            budgetAmountScreen.titleLabel?.text = "0.00";
+            budgetAmountScreen.setTitle(currencyVal + "0.00", for: .normal);
         } else {
             continueBtn.isEnabled = true;
             continueBtn.alpha = 1.0;
-            budgetAmountScreen.setTitle(budgetAmount, for: .normal);
+            budgetAmountScreen.setTitle(currencyVal + budgetAmount, for: .normal);
         }
     }
 
