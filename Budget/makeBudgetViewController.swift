@@ -14,6 +14,13 @@ class makeBudgetViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var budgetName: UITextField!
     @IBOutlet weak var continueBtn: UIButton!
     
+    
+    @IBAction func backBtn(_ sender: UIButton) {
+        let budgetListController = self.storyboard?.instantiateViewController(withIdentifier: "budgetListController") as! BudgetListViewController
+        budgetListController.budgets = self.budgets;
+        self.present(budgetListController, animated: true, completion: nil)
+    }
+    
     @IBAction func inputBudgetName(_ sender: UITextField) {
         if(budgetName.text != "") {
             continueBtn.isEnabled = true
