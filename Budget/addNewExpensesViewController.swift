@@ -59,7 +59,13 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
         }
         dropdown.dataSource = budgetNames;
         dropdown.bottomOffset = CGPoint(x: 0, y: dropdown.plainView.bounds.height + 120)
-        budgetLeftLabel.text! = "Budget left: \(currencyVal)\(budget?.moneyLeftAmount ?? "0.00")"
+        
+        if let amount = budget?.moneyLeftAmount, let newAmount = Double(amount) {
+            budgetLeftLabel.text! = "Budget left: " + currencyVal + String(format:"%.02f", newAmount) //always add two numbers after decimal
+        }
+        
+        
+        //budgetLeftLabel.text! = "Budget left: \(currencyVal)\(budget?.moneyLeftAmount ?? "0.00")"
         if(budget?.daysLeft == 9999) {
             timeLeft.text! = "Time left: unlimited"
         } else {
@@ -88,7 +94,10 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
             expensesViewController.budget = self.budget;
             
             self.categoryText.text = self.budget?.budgetName;
-            self.budgetLeftLabel.text! = "Budget left: \(self.currencyVal)\(self.budget?.moneyLeftAmount ?? "0.00")"
+            
+            if let amount = self.budget?.moneyLeftAmount, let newAmount = Double(amount) {
+                self.budgetLeftLabel.text! = "Budget left: " + self.currencyVal + String(format:"%.02f", newAmount) //always add two numbers after decimal
+            }
             self.timeLeft.text! = "Time left: \(self.budget?.daysLeft ?? 0)"
             self.present(expensesViewController, animated: true, completion: nil)
             
@@ -126,7 +135,13 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
                 nums[0] = "0"
             }
         } else { //OK is pressed
-            inputAmount.text!.remove(at: inputAmount.text!.startIndex) //remove dollar symbol to turn into a double
+            if(currencyVal.count > 1) {
+                inputAmount.text!.remove(at: inputAmount.text!.startIndex) //remove dollar symbol to turn into a double
+                inputAmount.text!.remove(at: inputAmount.text!.startIndex) //remove dollar symbol to turn into a double
+            } else {
+                inputAmount.text!.remove(at: inputAmount.text!.startIndex) //remove dollar symbol to turn into a double
+            }
+            
             let expense = Expense(expense: inputAmount.text!, spentOn: expenseName.text!);
             budget?.expenses.append(expense);
         
@@ -142,7 +157,9 @@ class addNewExpensesViewController: UIViewController, UITextFieldDelegate {
             
             
            // expenses[category]![0] = expenses[category]![0] + Double(inputAmount.text!)!
-            budgetLeftLabel.text! = "Budget left: \(currencyVal)\(budget?.moneyLeftAmount ?? "0.00")"
+            if let amount = budget?.moneyLeftAmount, let newAmount = Double(amount) {
+                budgetLeftLabel.text! = "Budget left: " + currencyVal + String(format:"%.02f", newAmount) //always add two numbers after decimal
+            }
             if(budget?.daysLeft == 9999) {
                 timeLeft.text! = "Time left: unlimited"
             } else {

@@ -20,6 +20,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
     var expenses:[Expense] = [];
     
     var budgets: [Budget] = [];
+    var currencyVal = "";
 
     @IBOutlet weak var budgetCategories: UITableView!
     
@@ -32,7 +33,18 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
         let budget = budgets[indexPath.row]
         
         cell.textLabel?.text = budget.budgetName;
-        cell.detailTextLabel?.text = "Money left: " + budget.moneyLeftAmount;
+        
+        if(budget.budgetCurrencyType) == "yen" {
+            currencyVal = "¥";
+        } else if (budget.budgetCurrencyType) == "cad" {
+            currencyVal = "C$";
+        } else {
+            currencyVal = "$";
+        }
+        
+        //String(format:"%.02f",
+        
+        cell.detailTextLabel?.text = "Money left: " + currencyVal + String(format:"%.02f", Double(budget.moneyLeftAmount)!);
         
         return cell
     }
@@ -52,6 +64,7 @@ class BudgetListViewController: UIViewController, UITableViewDataSource, UITable
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         budgetCategories.dataSource = self
         budgetCategories.delegate = self

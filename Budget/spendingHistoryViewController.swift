@@ -36,7 +36,11 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
             currencyVal = "$";
         }
         
-        cell.textLabel?.text = currencyVal + (expense?.expense)!;
+        
+        if let amount = expense?.expense, let newAmount = Double(amount) {
+            cell.textLabel?.text = currencyVal + String(format:"%.02f", newAmount);
+        }
+        
         cell.detailTextLabel?.text = "Spent on: " + (expense?.spentOn)!;
     
         return cell
@@ -78,7 +82,7 @@ class spendingHistoryViewController: UIViewController, UITableViewDataSource, UI
         
         if let moneyLeft = budget?.moneyLeftAmount, let left = Double(moneyLeft) {
             if let budgetTotal = budget?.budgetAmount, let total = Double(budgetTotal) {
-                budgetSpentLabel.text = currencyVal + String(total - left) + " spent";
+                budgetSpentLabel.text = currencyVal + String(format:"%.02f", (total - left)) + " spent";
             }
         }
     }
