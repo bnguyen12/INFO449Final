@@ -42,6 +42,13 @@ class messageViewController: UIViewController, MFMessageComposeViewControllerDel
         dropdown.bottomOffset = CGPoint(x: 0, y: dropdown.plainView.bounds.height + 223)
     }
     
+    @IBAction func backBtn(_ sender: UIButton) {
+        let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
+        budgetInfoViewController.budgets = self.budgets;
+        budgetInfoViewController.budget = self.budget;
+        self.present(budgetInfoViewController, animated: true, completion: nil)
+    }
+    
     // Open drop down menu when clicked
     @IBAction func clickCategory(_ sender: UIButton) {
         dropdown.show()
