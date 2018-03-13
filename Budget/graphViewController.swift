@@ -41,7 +41,7 @@ class graphViewController: UIViewController {
             numbers.append(Double(expense.expense)!);
         }
         
-        budgetNameLabel.text = budget?.budgetName;
+        budgetName.text = budget?.budgetName;
         
         let bars = ["Expenses", "Total Budget"]
         var money:[Double] = [];
