@@ -16,15 +16,22 @@ class graphViewController: UIViewController {
     
     @IBOutlet weak var barChartView: BarChartView!
     @IBOutlet weak var txtTextBox: UITextField!
-
+    @IBOutlet weak var budgetName: UILabel!
+    
     var numbers: [Double] = [];
     
-    
-    @IBAction func backBtn(_ sender: UIButton) {
+    @IBAction func listButton(_ sender: UIButton) {
         let spendingHistoryViewController = self.storyboard?.instantiateViewController(withIdentifier: "spendingHistoryViewController") as! spendingHistoryViewController
         spendingHistoryViewController.budgets = self.budgets;
         spendingHistoryViewController.budget = self.budget;
         self.present(spendingHistoryViewController, animated: true, completion: nil)
+    }
+    
+    @IBAction func backBtn(_ sender: UIButton) {
+        let budgetInfoViewController = self.storyboard?.instantiateViewController(withIdentifier: "budgetInfoViewController") as! budgetInfoViewController
+        budgetInfoViewController.budgets = self.budgets;
+        budgetInfoViewController.budget = self.budget;
+        self.present(budgetInfoViewController, animated: true, completion: nil)
     }
     
     override func viewDidLoad() {
@@ -33,6 +40,8 @@ class graphViewController: UIViewController {
         for expense in (budget?.expenses)! {
             numbers.append(Double(expense.expense)!);
         }
+        
+        budgetNameLabel.text = budget?.budgetName;
         
         let bars = ["Expenses", "Total Budget"]
         var money:[Double] = [];
